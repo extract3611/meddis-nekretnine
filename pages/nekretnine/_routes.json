@@ -1,0 +1,28 @@
+{
+    "/": {
+      "default": "/nekretnine",
+      "en": "/properties",
+      "ru": "/недвижимость"
+    },
+    "sve-nekretnine": {
+      "default": "sve-nekretnine",
+      "en": "all-properties",
+      "ru": "все-недвижимости"
+    },
+    "objavi-nekretninu": {
+      "default": "objavi-nekretninu",
+      "en": "publish-property",
+      "ru": "aaa"
+    },
+  
+    "/nekretnina": {
+      "default": "/nekretnina",
+      "en": "/property",
+      "ru": "/недвижимость"
+    },
+    "pretrazi-nekretninu": {
+      "default": "pretrazi-nekretninu",
+      "en": "search-property",
+      "ru": "поиск-недвижимость"
+    }
+  }

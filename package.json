@@ -1,0 +1,80 @@
+{
+  "name": "sheltos-theme-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "next lint",
+    "lint-fix": "next lint --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@egjs/react-grid": "^1.12.1",
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@reduxjs/toolkit": "^1.8.6",
+    "animate.css": "^4.1.1",
+    "apexcharts": "^3.35.5",
+    "availity-reactstrap-validation": "^2.7.1",
+    "axios": "^1.1.2",
+    "bcrypt": "^5.1.0",
+    "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
+    "jsonwebtoken": "^9.0.0",
+    "leaflet": "^1.9.3",
+    "lord-icon-element": "^3.4.4",
+    "lottie-web": "^5.11.0",
+    "next": "^13.0.3",
+    "next-i18next": "^12.1.0",
+    "next-pwa": "^5.6.0",
+    "photoswipe": "^5.3.2",
+    "pigeon-maps": "^0.21.3",
+    "react": "^18.2.0",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-alert-template-mui": "^1.0.7",
+    "react-apexcharts": "^1.4.0",
+    "react-awesome-reveal": "^4.1.0",
+    "react-bootstrap": "^2.7.2",
+    "react-content-loader": "^6.2.0",
+    "react-data-table-component": "^7.5.3",
+    "react-dom": "^18.2.0",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-feather": "^2.0.10",
+    "react-leaflet": "^4.1.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-photoswipe-gallery": "^2.2.2",
+    "react-range": "^1.8.14",
+    "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.0.8",
+    "reactstrap": "^9.1.4",
+    "sass": "^1.55.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.4.3",
+    "typed.js": "^2.0.12",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^13.0.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "style-loader": "^3.3.2"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
