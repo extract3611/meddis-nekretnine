@@ -43,7 +43,7 @@ else
 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content={description} />
-<meta property="og:image" content="/assets/images/logo.webp" />
+<meta property="og:image" content="/assets/images/logo.svg" />
 
 <meta name="author" content="Digital Artefakt" />
 
@@ -58,7 +58,7 @@ else
   <meta property="twitter:url" content="https://meddis-nekretnine.me"/>
   <meta property="twitter:title" content="Agencija za promet nekretnina Meddis Group"/>
   <meta property="twitter:description" content="Meddis Group je vaš pouzdani partner u oblasti nekretnina, sa više od 26 godina iskustva. Bilo da tražite nekretninu za investiciju, stanovanje ili odmor, naš stručni tim će vam pomoći da pronađete idealnu opciju. Kvalitet, posvećenost i sigurnost naših usluga su garant za vaše zadovoljstvo."/>
-  <meta property="twitter:image" content="/assets/images/logo.webp"/>
+  <meta property="twitter:image" content="/assets/images/logo.svg"/>
 
 
 </Head>

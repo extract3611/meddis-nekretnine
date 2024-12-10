@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Meddis Nekretnine je agencija sa 26 godina iskustva u prodaji i kupovini nekretnina. Specijalizovani smo za stambene, poslovne i luksuzne objekte."
         />
-        <meta property="og:image" content="/assets/images/logo.png" />
+        <meta property="og:image" content="/assets/images/logo.svg" />
 
         <meta name="author" content="Meddis Group d.o.o." />
 
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
           property="twitter:description"
           content="Meddis Nekretnine je agencija sa 26 godina iskustva u prodaji i kupovini nekretnina. Pomažemo u pronalaženju idealnih nekretnina za investicije, stanovanje ili odmor."
         />
-        <meta property="twitter:image" content="/assets/images/logo.png" />
+        <meta property="twitter:image" content="/assets/images/logo.svg" />
       </Head>
 
       <Provider store={store}>
