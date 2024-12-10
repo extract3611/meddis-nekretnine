@@ -155,7 +155,7 @@ useEffect(()=>{
 }},[slikeGalerijaUrl])
 useEffect(()=>{console.log(fajl)},[fajl])
 let fetchNekretnine = async () => {
-    return await axios.get(`/api/nekretnine`);
+    return await axios.get(`https://white-homes.me/api/nekretnine`);
   };
     const uploadSlike= (podaci) => {
     
@@ -231,8 +231,8 @@ if(nekretnina!=null && fajl!=null){
                     console.log(error);
                   });
                 toast.success("Vaši podaci su uspješno sačuvani");
-                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==true)));
-                    dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==false)));
+                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
+                    dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)));
                 setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},1000)});}}
             render={() => (<Form>
                     <Row className="gx-3">

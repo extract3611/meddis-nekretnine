@@ -1,8 +1,8 @@
 {
   "/": {
-    "default": "/",
-    "en": "/",
-    "ru": "/"
+    "default": "",
+    "en": "",
+    "ru": ""
   },
   "kontakt": {
     "default": "kontakt",
@@ -13,16 +13,6 @@
     "default": "o-nama",
     "en": "about-us",
     "ru": "о-нас"
-  },
-  "generalno-ciscenje": {
-    "default": "generalno-ciscenje",
-    "en": "general-cleaning",
-    "ru": "генеральная уборка"
-  },
-  "Izdavanje-apartmana": {
-    "default": "Izdavanje-apartmana",
-    "en": "apartment-rental",
-    "ru": "аренда-квартиры"
   }
 
 

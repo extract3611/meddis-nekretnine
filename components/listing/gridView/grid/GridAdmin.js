@@ -25,7 +25,6 @@ const GridView = ({ side, size, gridType, listSize, mapModal, mapView, relativeS
     gridDispatch({ type: "gridStyle", payload: gridType });
   }, []);
   let sveNekretnine=useSelector(state=>state.nekretnine.niz)
-  useEffect(()=>{console.log(sveNekretnine)},[sveNekretnine])
   useEffect(() => {
    setValue(sveNekretnine)
   }, [sveNekretnine]);

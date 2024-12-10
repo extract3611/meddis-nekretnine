@@ -413,7 +413,7 @@
       .media {
         .offer-icon {
           &::before {
-            background-image: var(--theme-gradient4);
+            background-image: #006a62;
           }
         }
       }
@@ -1011,7 +1011,7 @@
       &:active,
       &.active {
         background: $light-border;
-        color: $title-color;
+        color: #1f3d75;
       }
 
       &:hover,
@@ -1076,7 +1076,7 @@
         padding: 8px 15px;
         border: 1px solid $light-border;
         border-radius: 4px;
-        color: $title-color;
+        color: #1f3d75;
         display: block;
         transition: 0.5s;
         font-family: $font_2, $font_3;
@@ -1099,8 +1099,8 @@
 
       &.active {
         a {
-          color: var(--theme-default);
-          border-color: var(--theme-default);
+          color: #1f3d75;
+          border-color: #1f3d75;
           transition: 0.5s;
         }
       }
@@ -1599,7 +1599,7 @@
     height: 100%;
 
     svg {
-      color: var(--theme-default2);
+      color: #386dc0 !important;
       width: 30px;
       height: 30px;
     }
@@ -2797,7 +2797,12 @@
           }
         }
         p {
-          display: block;
+          display: block; display: -webkit-box; /* Omogućava podršku za line-clamp */
+          -webkit-box-orient: vertical; /* Postavlja orijentaciju na vertikalnu */
+          overflow: hidden; /* Sakriva višak teksta */
+          text-overflow: ellipsis; /* Dodaje tri tačke na kraju skraćenog teksta */
+          line-clamp: 3; /* Postavlja maksimalan broj linija (3 u ovom slučaju) */
+          -webkit-line-clamp: 3;
         }
       }
     }

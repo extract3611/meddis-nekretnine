@@ -1,0 +1,27 @@
+{
+    "rewrites": [
+        {"source": "/locales/:path*",
+        "destination": "/_next/static/locales/:path*"},
+        {
+          "source": "/api/:path*",
+          "destination": "https://white-homes.me/api/:path*"
+        },
+        {
+          "source": "/admin/api/:path*",
+          "destination": "https://white-homes.me/api/:path*"
+        },
+        {
+          "source": "/admin/izmijeni-nekretninu/api/:path*",
+          "destination": "https://white-homes.me/api/:path*"
+        },
+        {
+          "source": "/slike/:path*",
+          "destination": "https://white-homes.me/:path*"
+        },
+        {
+          "source": "/slike/:path*",
+          "destination": "https://white-homes.me/:path*"
+        }
+      
+    ]
+  }

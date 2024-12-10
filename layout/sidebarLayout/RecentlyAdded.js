@@ -13,7 +13,7 @@ const RecentlyAdded = (latest) => {
   const [value, setValue] = useState();
   useEffect(() => {
     console.log(latest)
-    getData(`${process.env.API_URL}/property`)
+    getData(`/api/property`)
       .then((res) => {
         setValue(res.data?.LatestForSalePropertyData);
       })

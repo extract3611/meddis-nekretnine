@@ -19,7 +19,7 @@ const Pretrazi = () => {
 };
 
 Pretrazi.getLayout = function getLayout(page) {
-  return <LayoutNested  title="Search real estate - The largest real estate database in Montenegro" description="Whether you are looking for an investment, residential or vacation property, you can find all what you in in the  largest real estate database in Montenegro.">{page}</LayoutNested>;
+  return <LayoutNested  title="Search real estate - The largest real estate database in whole Montenegro" description="If you are looking for an investment, residential or vacation property, you can find all what you in in the largest real estate database in Montenegro.">{page}</LayoutNested>;
 };
 
 export default Pretrazi;

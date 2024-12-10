@@ -16,7 +16,7 @@ const Onama = () => {
 };
 
 Onama.getLayout = function getLayout(page) {
-  return <Layout title="O nama - Agencija za nekretnine White Homes"  description="Saznajte više o našoj agenciji za nekretnine i našoj misiji pružanja kvalitetnih usluga za naše cijenjene klijente." >{page}</Layout>;
+  return <Layout title="O nama - Agencija za nekretnine Meddis Group"  description="Saznajte više o našoj agenciji za nekretnine i našoj misiji pružanja kvalitetnih usluga za naše cijenjene klijente." >{page}</Layout>;
 };
 
 export default Onama;

@@ -43,7 +43,6 @@ export default function Navbar2() {
         </div>
         {korisnik != null ? (
           <Link to="/">
-            {" "}
             <div className="kucica">
               <FontAwesomeIcon
                 style={{ color: "white", fontSize: "20px", cursor: "pointer" }}

@@ -19,7 +19,7 @@ const Pretrazi = () => {
 };
 
 Pretrazi.getLayout = function getLayout(page) {
-  return <LayoutNested  title="Pretraži nekretnine - Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, White Homes će vam pomoći da pronađete idealnu nekretninu za vaše potrebe..Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.">{page}</LayoutNested>;
+  return <LayoutNested  title="Pretraži nekretnine - Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, Meddis Group će vam pomoći da pronađete idealnu nekretninu za vaše potrebe.">{page}</LayoutNested>;
 };
 
 export default Pretrazi;

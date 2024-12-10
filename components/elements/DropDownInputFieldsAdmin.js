@@ -12,7 +12,6 @@ const DropdownInputFields = ({ label, filterValues, setFilterValues, lg, sm, sta
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState("true");
   const inputFilter = useSelector((state) => state.inputsReducer);
-useEffect(()=>{console.log(inputFilter)},[inputFilter]);
 if(inputFilter.tipNekretnine=="Zemljište"){
   return (
     <>

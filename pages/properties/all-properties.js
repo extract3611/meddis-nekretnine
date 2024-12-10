@@ -20,8 +20,7 @@ const RightSidebar = () => {
   );
 };
 RightSidebar.getLayout = function getLayout(page) {
-  return <Layout title="All real estate - The largest real estate database in Montenegro" description="Whether you are looking for an investment, residential or vacation property, we offer a wide range of all types of properties
-.">{page}</Layout>;
+  return <Layout title="All real estate - The largest real estate database in Montenegro" description="Whether you are looking for an investment, residential or vacation property, we offer a wide range of all types of properties.">{page}</Layout>;
 };
 
 

@@ -24,7 +24,7 @@ const PropertyServicesSection = ({ value }) => {
             </div>
             <Row className=" property-service column-space">
               {value?.map((data, i) => (
-                <Col xl="4" md="6" className=" wow fadeInUp" key={i}>
+                <Col xl="3" md="6" className=" wow fadeInUp" key={i}>
                   <div className="service-box">
                     <div className="icon-round">{data.img}</div>
                     <h3>

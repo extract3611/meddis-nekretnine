@@ -624,7 +624,7 @@ export const feature1 = {
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
       },
     },
   ],

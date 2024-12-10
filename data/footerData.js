@@ -1,11 +1,11 @@
 export const FooterData = {
   contactDetails: [
-    { iconsClass: "fas fa-map-marker-alt", detail: "Marka Radovića 7, Central Point - Podgorica, Crna Gora" },
-    { iconsClass: "fas fa-phone-alt", detail: "(+382) 67-201-391" },
-    { iconsClass: "fas fa-envelope", detail: "office@whitehomes.me" },
+    { iconsClass: "fas fa-map-marker-alt", detail: "Bulevar 24. Novembra - Bar, Crna Gora" },
+    { iconsClass: "fas fa-phone-alt", detail: "(+382) 67-623-663" },
+    { iconsClass: "fas fa-envelope", detail: "office@meddisgroup.me" },
   ],
-  description: "Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, ova White Homes će vam pomoći da pronađete idealnu nekretninu za vaše potrebe.. Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.",
-  brand_description: "Agencija za nekretnine White Homes je renomirana kompanija koja se specijalizirala za iznajmljivanje i prodaju nekretnina. Njihov tim stručnjaka pruža vrhunsku uslugu klijentima, pomažući im pronaći savršeni dom ili ulaganje, s fokusom na visoku profesionalnost i zadovoljstvo klijenata.",
+  description: "Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, ova Meddis Group će vam pomoći da pronađete idealnu nekretninu za vaše potrebe.. Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.",
+  brand_description: "Sa tradicijom dugom 26 godina, MEDDiS Group d.o.o. je porodično preduzeće koje uspješno posluje u oblasti prometa nekretnina i građevinarstva. Naša posvećenost kvalitetu, stručnost i iskustvo čine nas idealnim izborom za sve koji traže profesionalnu podršku u oblasti nekretnina.",
   about: {
     title: "Korisne veze",
     children: [
@@ -19,9 +19,9 @@ export const FooterData = {
   social: {
     title: "Društvene mreže",
     children: [
-      { title: "Facebook", link: "https://www.facebook.com/info.whitehomesrentals/" },
-      { title: "Instagram", link: "https://www.instagram.com/white_homes_nekretnine/" },
-      { title: "Linkedin", link: "https://www.linkedin.com/" },
+      { title: "Facebook", link: "https://www.facebook.com/Nekretnine2019/" },
+      { title: "Instagram", link: "https://www.instagram.com/meddis_group_nekretnin_e/p/DCXeMVaIJ-j/" },
+      { title: "Linkedin", link: "https://www.linkedin.com/in/sanela-li%C4%8Dina-804b8917a?originalSubdomain=me" },
 
     ],
   },
@@ -30,8 +30,8 @@ export const FooterData = {
   social: {
     title: "Social",
     children: [
-      { title: "Facebook", link: "https://www.facebook.com/info.whitehomesrentals/" },
-      { title: "Instagram", link: "https://www.instagram.com/white_homes_nekretnine/" },
+      { title: "Facebook", link: "https://www.facebook.com/Nekretnine2019/" },
+      { title: "Instagram", link: "https://www.instagram.com/meddis_group_nekretnin_e/p/DCXeMVaIJ-j/" },
      
     ],
   },
@@ -53,14 +53,18 @@ export const FooterData = {
       { title: "Poslovni Prostori", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B100%252C200000%255D%252C%2522povrsina%2522%253A%255B20%252C500%255D%252C%2522tip%2522%253A%2522Poslovni%2520prostor%2522%257D" },
       { title: "Zemljišta", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B100%252C200000%255D%252C%2522povrsina%2522%253A%255B20%252C500%255D%252C%2522tip%2522%253A%2522Zemlji%25C5%25A1te%2522%257D" },
       { title: "Vile", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B100%252C200000%255D%252C%2522povrsina%2522%253A%255B20%252C500%255D%252C%2522tip%2522%253A%2522Vila%2522%257D" },
+      { title: "Hoteli", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B0%252C5000000%255D%252C%2522povrsina%2522%253A%255B0%252C5000%255D%252C%2522sortirajPrema%2522%253A%2522Datum%2520-%2520Najnoviji%2522%252C%2522tip%2522%253A%2522Hotel%2522%257D" },
+      { title: "Vikendica", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B0%252C5000000%255D%252C%2522povrsina%2522%253A%255B0%252C5000%255D%252C%2522sortirajPrema%2522%253A%2522Datum%2520-%2520Najnoviji%2522%252C%2522tip%2522%253A%2522Vikendica%2522%257D" },
+      { title: "Investiciona nekretnina", link: "/nekretnine/sve-nekretnine?filtriraniPodaci=%257B%2522cijena%2522%253A%255B0%252C5000000%255D%252C%2522povrsina%2522%253A%255B0%252C5000%255D%252C%2522sortirajPrema%2522%253A%2522Datum%2520-%2520Najnoviji%2522%252C%2522tip%2522%253A%2522Investiciona%2520nekretnina%2522%257D" },
+
     ],
   },
   social: {
     title: "Društvene mreže",
     children: [
-      { title: "Facebook", link: "https://www.facebook.com/info.whitehomesrentals/" },
-      { title: "Instagram", link: "https://www.instagram.com/white_homes_nekretnine/" },
-      { title: "Linkedin", link: "https://www.linkedin.com/" },
+      { title: "Facebook", link: "https://www.facebook.com/Nekretnine2019/" },
+      { title: "Instagram", link: "https://www.instagram.com/meddis_group_nekretnin_e/p/DCXeMVaIJ-j/" },
+      { title: "Linkedin", link: "https://www.linkedin.com/in/sanela-li%C4%8Dina-804b8917a?originalSubdomain=me" },
 
     ],
   },

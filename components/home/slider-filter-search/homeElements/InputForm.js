@@ -24,31 +24,11 @@ const InputForm = ({ label, lg, sm, lastSm }) => {
 const dispatch=useDispatch();
   const [value, setValue] = useState();
 
-  useEffect(() => {
-    console.log(input)
-    getData(`${process.env.API_URL}/property`)
-      .then((res) => {
-        console.log(res);
-        setValue(
-          res.data &&
-            res.data !== undefined &&
-            Object.keys(res.data)
-              .map((key) => [res.data[key]])
-              .flat(2)
-              .filter((arrData) => Array.isArray(arrData.img)),
-        );
-      })
-      .catch((error) => console.log("Error", error));
-  }, []);
 
 
-  useEffect( ()=>console.log("vrijednost je"+value),[value]);
 
-  useEffect(()=>{if(input.status==t("Izdavanje")){dispatch({type:"cijena",payload:[100,5000]});
-  console.log(input)}
-  else{dispatch({type:"cijena",payload:[100,200000]})}
-    
-  },[input.status])
+
+
 
 
 
@@ -56,13 +36,13 @@ const dispatch=useDispatch();
     <Row className="gx-3">
       <DropdownInputFields filterValues={filterValues} setFilterValues={setFilterValues} label={label} start={0} end={6} lg={lg} sm={sm} lastSm={lastSm} />
 
-      <RangeInputFields label="Cijena" name="cijena" filterValues={filterValues} setFilterValues={setFilterValues} min={100} max={ input.status==t("Izdavanje") ? 5000 : 1000000} lg={lg} sm={sm} />
-      <RangeInputFields label="Površina" name="povrsina" filterValues={filterValues} setFilterValues={setFilterValues} min={15} max={5000} lg={lg} sm={sm} />
+      <RangeInputFields label="Cijena" name="cijena" filterValues={filterValues} setFilterValues={setFilterValues} min={0} max={ input.status==t("Izdavanje") ? 5000001 : 5000000} lg={lg} sm={sm} />
+      <RangeInputFields label="Površina" name="povrsina" filterValues={filterValues} setFilterValues={setFilterValues} min={0} max={5000} lg={lg} sm={sm} />
 
       <TextInputField  filterValues={filterValues} setFilterValues={setFilterValues}  name="pretraga"  lg={lg} sm={sm}/>
       <Col lg={lg || 12}>
         <Link style={{width:'100%'}} href="/nekretnine/pretrazi-nekretninu" className="btn btn-gradient mt-3">
-            {t("Pretraži")}
+            <button className="btn btn-gradient">{t("Pretraži")}</button>
         </Link>
       </Col>
     </Row>

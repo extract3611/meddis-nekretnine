@@ -15,8 +15,8 @@ const Soldout = () => {
                     <div className="d-flex">
                         <h5>Sold out</h5>
                         <Link href='/types/appartment' className="arrow-animated">
-                            See Details
-                            <ChevronRight />
+                            <div>See Details
+                            <ChevronRight /></div>
                         </Link>
                     </div>
                 </CardHeader>

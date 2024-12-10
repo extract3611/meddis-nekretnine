@@ -26,7 +26,6 @@ const PropertyBox = ({ data, relativeSlider, video }) => {
   const [load, setLoad] = useState(true);
   const [slike,postaviSlike]=useState([])
   const { symbol, currencyValue } = useSelector((state) => state.currencyReducer);
-  useEffect(()=>{console.log(data)},[]);
 useEffect(()=>{axios.post(`/api/galerija-nekretnina`, {
   id:data.id_nekretnina
 })
@@ -86,9 +85,9 @@ return (
             <div className="property-btn d-flex">
               <span>{data.datum}</span>
               <Link href={Array.isArray(data.img) ? `/nekretnine/nekretnina/${data.id_nekretnina}` : `/nekretnine/nekretnina/${data.id_nekretnina}`}>
+              <div>
                 <button type="button" className="btn btn-dashed btn-pill">
-                  {t("Detalji")}
-                </button>
+                  {t("Detalji")}</button></div>
               </Link>
             </div>
           </div>

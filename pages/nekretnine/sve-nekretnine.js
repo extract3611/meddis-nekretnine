@@ -20,7 +20,7 @@ const RightSidebar = () => {
   );
 };
 RightSidebar.getLayout = function getLayout(page) {
-  return <Layout title="Sve nekretnine- Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, mi vam nudimo široki spektar svih tipova nekretnina.">{page}</Layout>;
+  return <Layout title="Sve nekretnine- Najveća baza nekretnina u Crnoj Gori - Meddis" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, mi vam nudimo široki spektar svih tipova nekretnina. Nekretnine Crna Gora.">{page}</Layout>;
 };
 
 

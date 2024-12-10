@@ -20,29 +20,11 @@ const InputForm = ({ label, lg, sm, lastSm }) => {
 const dispatch=useDispatch();
   const [value, setValue] = useState();
 
-  useEffect(() => {
-    console.log(input)
-    getData(`${process.env.API_URL}/property`)
-      .then((res) => {
-        console.log(res);
-        setValue(
-          res.data &&
-            res.data !== undefined &&
-            Object.keys(res.data)
-              .map((key) => [res.data[key]])
-              .flat(2)
-              .filter((arrData) => Array.isArray(arrData.img)),
-        );
-      })
-      .catch((error) => console.log("Error", error));
-  }, []);
+  
 
-
-  useEffect( ()=>console.log("vrijednost je"+value),[value]);
-
-  useEffect(()=>{if(input.status=="Izdavanje"){dispatch({type:"cijena",payload:[100,5000]});
-  console.log(input)}
-  else{dispatch({type:"cijena",payload:[100,200000]})}
+  useEffect(()=>{if(input.status=="Izdavanje"){dispatch({type:"cijena",payload:[0,5000]});
+}
+  else{dispatch({type:"cijena",payload:[0,5000000]})}
     
   },[input.status])
 

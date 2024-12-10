@@ -28,7 +28,7 @@ const SliderFilterSearch = () => {
 
 
 SliderFilterSearch.getLayout = function getLayout(page) {
-  return <Layout title="Agencija za nekretnine White Homes - Najveći izbor nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, White Homes će vam pomoći da pronađete idealnu nekretninu za vaše potrebe..Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.">{page}</Layout>;
+  return <Layout title="Agencija za nekretnine Meddis Group - Najveći baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, Meddis group će vam pomoći da pronađete idealnu nekretninu za vaše potrebe..Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.">{page}</Layout>;
 }; 
 
 export default SliderFilterSearch;

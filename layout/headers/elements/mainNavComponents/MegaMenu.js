@@ -8,9 +8,10 @@ import { Col, Container, Row } from "reactstrap";
 import { useTranslation } from "next-i18next";
 import useMobileSize from "../../../../utils/useMobileSize";
 
-const MegaMenu = ({ navTitle, isOpen, setIsOpen, isOpenNestedChild, setIsOpenNestedChild }) => {
+const MegaMenu = ({ navTitle, isOpen, setIsOpen, isOpenNestedChild, setIsOpenNestedChild, setOpenNavbar  }) => {
   const { t } = useTranslation("common");
   const mobileSize = useMobileSize();
+  if(navTitle.child!=undefined){
   return (
     <li className="mega-menu">
       {/* menuItem : PAGES */} {/* This all code for PAGES menu link*/}
@@ -20,8 +21,9 @@ const MegaMenu = ({ navTitle, isOpen, setIsOpen, isOpenNestedChild, setIsOpenNes
           setIsOpen(navTitle.title);
           isOpen === navTitle.title && setIsOpen();
         }}>
+          <a className="nav-link menu-title">
         {t(navTitle.title)}
-        <span className="according-menu">{isOpen === navTitle.title ? "-" : "+"}</span>
+        <span className="according-menu">{isOpen === navTitle.title ? "-" : "+"}</span></a>
       </Link>: <a
         className={`nav-link menu-title ${isOpen === navTitle.title && navTitle.children &&  "active"}`}
         onClick={(e) => {
@@ -55,13 +57,14 @@ const MegaMenu = ({ navTitle, isOpen, setIsOpen, isOpenNestedChild, setIsOpenNes
                         {nestedChildNavList.children.map((nestedChildNavListTitle, index) => (
                           <li key={index}>
                             <Link href={nestedChildNavListTitle.path}>
+                            <a className="nav-link menu-title">
                               {nestedChildNavListTitle.title}
                               {nestedChildNavListTitle.tag && <span className="label">{nestedChildNavListTitle.tag}</span>}
                               {nestedChildNavListTitle.icon && (
                                 <span className="icon-trend label">
                                   <i className="fas fa-bolt"></i>
                                 </span>
-                              )}
+                              )}</a>
                             </Link>
                           </li>
                         ))}
@@ -75,7 +78,21 @@ const MegaMenu = ({ navTitle, isOpen, setIsOpen, isOpenNestedChild, setIsOpenNes
         </Container>
       </div>
     </li>
-  );
+  );}
+  else{
+    return(<li onClick={()=>setOpenNavbar(false)} className="mega-menu">
+    {/* menuItem : PAGES */} {/* This all code for PAGES menu link*/}
+      <Link href={navTitle.path}
+      className={`nav-link menu-title ${isOpen === navTitle.title && navTitle.children &&  "active"}`}
+      onClick={(e) => {
+        setIsOpen(navTitle.title);
+        isOpen === navTitle.title && setIsOpen();
+      }}>
+        <a className="nav-link menu-title">
+      {t(navTitle.title)}
+      <span className="according-menu">{isOpen === navTitle.title ? "-" : "+"}</span></a>
+    </Link></li>)
+  }
 };
 
 export default MegaMenu;

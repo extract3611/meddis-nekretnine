@@ -14,7 +14,7 @@ import { useSelector,useDispatch } from "react-redux";
 export const getStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } });
 let p;
 export const getStaticPaths = async ({ locales }) => {
-  const response = await axios.get('http://localhost:8800/api/nekretnine');
+  const response = await axios.get('https://white-homes.me/api/nekretnine');
   const data = response.data;
   
 

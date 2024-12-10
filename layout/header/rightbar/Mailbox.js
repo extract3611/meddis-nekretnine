@@ -30,7 +30,7 @@ const Mailbox = () => {
                     <li>
                         <Media className="media">
                             <div className="chat-user">
-                                <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt='' />
+                                <img src="/assets/images/Sanela-Licina-web-600x563.webp" className="img-fluid" alt='' />
                             </div>
                             <Media body className="media-body">
                                 <Link href='manage-users/profile'>

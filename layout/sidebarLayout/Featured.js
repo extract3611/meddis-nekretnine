@@ -24,13 +24,15 @@ const Featured = ({data}) => {
         <Slider className="feature-slider" {...featureSlider}>
           {data.filter(nekretnina=>nekretnina.odabrano==1).map((nekretnina,key)=>(<div key={key}>
             <Link href={`/nekretnine/nekretnina/${nekretnina.id_nekretnina}`}>
-            <Img src={`/slike/${nekretnina.slika}`} className="bg-img" alt="" />
-            <div className="bottom-feature">
-              <h5>{nekretnina.naziv}</h5>
-              <h6>
-                {nekretnina.cijena!=0 ? nekretnina.cijena+"€" : <span style={{color:'orange'}}>{t("Na upit")}</span>}
-              </h6>
-            </div></Link>
+            <div>
+                <Img src={`/slike/${nekretnina.slika}`} className="bg-img" alt="" />
+                    <div className="bottom-feature">
+                      <h5>{nekretnina.naziv}</h5>
+                      <h6>
+                  {nekretnina.cijena!=0 ? nekretnina.cijena+"€" : <span style={{color:'orange'}}>{t("Na upit")}</span>}
+                  </h6>
+                 </div>
+                </div></Link>
           </div>))
           }
         </Slider>

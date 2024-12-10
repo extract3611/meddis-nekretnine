@@ -28,7 +28,9 @@ const DetailsDeskBox = ({nekretnina}) => {
               <li>
                 <span>{t("Status nekretnine")} :</span> {t(nekretnina.status)}
               </li>
-              
+              <li>
+                <span>{t("Adresa nekretnine")} :</span> {t(nekretnina.adresa)}
+              </li>
             </ul>
           </Col>
           <Col md='6' xl='4'>

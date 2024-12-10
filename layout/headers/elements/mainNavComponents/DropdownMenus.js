@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 import useMobileSize from "../../../../utils/useMobileSize";
 import { useRouter } from "next/router";
 
-const DropdownMenus = ({ navTitle, isOpen, setIsOpen, isOpenChild, setIsOpenChild, isOpenNestedChild, setIsOpenNestedChild, icon }) => {
+const DropdownMenus = ({ navTitle, isOpen, setIsOpen, isOpenChild, setIsOpenChild, isOpenNestedChild, setIsOpenNestedChild, icon,openNavbar,setOpenNavbar }) => {
   const { t } = useTranslation("common");
   const router = useRouter();
   // get window width
@@ -24,24 +24,26 @@ const DropdownMenus = ({ navTitle, isOpen, setIsOpen, isOpenChild, setIsOpenChil
           setIsOpen(navTitle.title);
           isOpen === navTitle.title && setIsOpen();
         }}>
+          <a className="nav-link menu-title">
         {!mobileSize && icon && navTitle.icon}
         {t(navTitle.title)}
-        <span className="according-menu">{isOpen === navTitle.title ? "-" : "+"}</span>
+        <span className="according-menu">{isOpen === navTitle.title ? "-" : "+"}</span></a>
       </Link>
       <ul className={`nav-submenu menu-content ${mobileSize && isOpen === navTitle.title ? "d-block" : "d-none d-xl-block"}`}>
         {navTitle.children.map((navList, index) => (
-          <li key={index}>
+          <li onClick={()=>setOpenNavbar(false)} key={index}>
             {navList.type === "link" ? (
               <>
                 {navList.path !== router.pathname ? (
                   <Link href={navList.path}>
+                    <a className="nav-link menu-title">
                     {t(navList.title)}
                     {navList.tag && <span className="label">{navList.tag}</span>}
                     {navList.icon && (
                       <span className="icon-trend label">
                         <i className="fas fa-bolt"></i>
                       </span>
-                    )}
+                    )}</a>
                   </Link>
                 ) : (
                   <a>
@@ -64,9 +66,9 @@ const DropdownMenus = ({ navTitle, isOpen, setIsOpen, isOpenChild, setIsOpenChil
                     setIsOpenChild(navList.title);
                     isOpenChild === navList.title && setIsOpenChild();
                   }}>
-                    
+                    <a className="nav-link menu-title">
                   {t(navList.title)}
-                  <span className="according-menu">{navList.type === "sub" && (isOpenChild === navList.title ? "-" : "+")}</span>
+                  <span className="according-menu">{navList.type === "sub" && (isOpenChild === navList.title ? "-" : "+")}</span></a>
                 </Link>
                 <ul className={`nav-sub-childmenu level1 ${mobileSize && isOpenChild === navList.title ? "d-block" : ""}`}>
                   {navList.type === "sub" &&
@@ -80,8 +82,9 @@ const DropdownMenus = ({ navTitle, isOpen, setIsOpen, isOpenChild, setIsOpenChil
                               setIsOpenNestedChild(childNavList.title);
                               isOpenNestedChild === childNavList.title && setIsOpenNestedChild();
                             }}>
+                              <a className="nav-link menu-title">
                             {t(childNavList.title)}
-                            <span className="according-menu">{childNavList.type === "sub" && (isOpenNestedChild === childNavList.title ? "-" : "+")}</span>
+                            <span className="according-menu">{childNavList.type === "sub" && (isOpenNestedChild === childNavList.title ? "-" : "+")}</span></a>
                           </Link>
                         ) : (
                           <a

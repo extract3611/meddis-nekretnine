@@ -25,9 +25,8 @@ const GridView = ({ side, size, gridType, listSize, mapModal, mapView, relativeS
     gridDispatch({ type: "gridStyle", payload: gridType });
   }, []);
   let sveNekretnine=useSelector(state=>state.nekretnine.niz)
-  useEffect(()=>{console.log(sveNekretnine)},[sveNekretnine])
   useEffect(() => {
-   setValue(sveNekretnine.filter(nekretnina=>{return(nekretnina.odobreno==true && nekretnina.korisnik!=4)}))
+   setValue(sveNekretnine.filter(nekretnina=>{return(nekretnina.odobreno==true && nekretnina.korisnik!=69)}))
   }, [sveNekretnine]);
 
   return (

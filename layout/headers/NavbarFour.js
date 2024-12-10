@@ -14,7 +14,6 @@ const NavbarFour = () => {
               <div className="brand-logo">
                 <Link href="/home/slider-filter-search">
                   <img src="/assets/images/logo/4.png" alt="" className="img-fluid for-light" />
-                  <img src="/assets/images/logo/9.png" alt="" className="img-fluid for-dark" />
                 </Link>
               </div>
               <MainNav />

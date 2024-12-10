@@ -42,6 +42,21 @@ const Category = ({ value }) => {
               <i className='fas fa-arrow-right me-2'></i>{t("Vila")}<span className='float-end'>({value?.filter((x) => x.tip === "Vila").length || 0})</span>
             </a>
           </li>
+          <li>
+            <a onClick={() => dispatch({ type: "tip", payload: "Hotel" })}>
+              <i className='fas fa-arrow-right me-2'></i>{t("Hotel")}<span className='float-end'>({value?.filter((x) => x.tip === "Hotel").length || 0})</span>
+            </a>
+          </li>
+          <li>
+            <a onClick={() => dispatch({ type: "tip", payload: "Vikendica" })}>
+              <i className='fas fa-arrow-right me-2'></i>{t("Vikendica")}<span className='float-end'>({value?.filter((x) => x.tip === "Vikendica").length || 0})</span>
+            </a>
+          </li>
+          <li>
+            <a onClick={() => dispatch({ type: "tip", payload: "Investiciona nekretnina" })}>
+              <i className='fas fa-arrow-right me-2'></i>{t("Investiciona nekretnina")}<span className='float-end'>({value?.filter((x) => x.tip === "Investiciona nekretnina").length || 0})</span>
+            </a>
+          </li>
         
         </ul>
       </div>

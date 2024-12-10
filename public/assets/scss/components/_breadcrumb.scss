@@ -71,6 +71,7 @@
 
                     a {
                         color: rgba($white, 0.8);
+                        &:hover{color:#006a62 !important;}
                     }
 
                     +.breadcrumb-item {

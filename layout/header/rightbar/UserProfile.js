@@ -14,7 +14,7 @@ const UserProfile = () => {
     return (
         <li className="profile-avatar onhover-dropdown">
             <div>
-                <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt='' />
+                <img src="/assets/images/Sanela-Licina-web-600x563.webp" className="img-fluid" alt='' />
             </div>
             <ul className="profile-dropdown onhover-show-div">
                

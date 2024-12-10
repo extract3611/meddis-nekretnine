@@ -7,6 +7,8 @@ import Slider from "react-slick";
 import { galleryFor, galleryNav } from "../../../data/slickSlider";
 import Img from "../../../utils/BackgroundImageRatio";
 import NoSsr from "../../../utils/NoSsr";
+import { LoadingScreen } from "../../../components/Common/loader";
+
 import { useRouter } from "next/router";
 import sveNekretnine from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 import axios from "axios";
@@ -16,7 +18,10 @@ const GallerySlider = () => {
 
   const ruter = useRouter();
   const { nekretnina } = ruter.query;
-  useEffect(()=>{axios.post(`/api/galerija`, {
+  useEffect(()=>{
+    postaviSlike([]);
+
+    axios.post(`/api/galerija`, {
     id:nekretnina
   })
   .then(function (response) {
@@ -36,25 +41,15 @@ const GallerySlider = () => {
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-  const HomeImage = [
-    "/assets/images/property/4.jpg",
-    "/assets/images/property/3.jpg",
-    "/assets/images/property/14.jpg",
-    "/assets/images/property/11.jpg",
-    "/assets/images/property/12.jpg",
-    "/assets/images/property/4.jpg",
-    "/assets/images/property/3.jpg",
-    "/assets/images/property/11.jpg",
-    "/assets/images/property/12.jpg",
-  ];
-  if(loader){
+ 
+  if(slike.length!=0){
   return (
     <NoSsr>
       <Slider className="gallery-for" {...galleryFor} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
         {slike.map((data, i) => (
           <div key={i}>
             <div>
-              <Img src={`/slike/${data.slika}`} className="bg-img" />
+              <Img src={`/slike/${data.slika}`} style={{width:'100%',height:'100%'}} className="bg-img" />
             </div>
           </div>
         ))}
@@ -72,7 +67,7 @@ const GallerySlider = () => {
   );}
 
 else{
-  return(<>Ocitivanje</>)
+  return(<><div style={{display:'flex',justifyContent:'center'}}><Img src="/assets/images/ajax-loader.gif"/></div></>)
 }}
 
 export default GallerySlider;

@@ -30,8 +30,9 @@ const FooterLink = ({ value, isActive, setIsActive, liteFooter }) => {
               ) : (
                 <li>
                   <Link href={value.link}>
+                  <a>
                     {liteFooter && <ChevronRight />}
-                    {t(value.title)}
+                    {t(value.title)}</a>
                   </Link>
                 </li>
               )}

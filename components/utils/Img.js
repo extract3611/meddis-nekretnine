@@ -15,7 +15,7 @@ const Img = (props) => {
                 `
         background-image: url(${src});
         background-size:cover; 
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
         display: block;
         `,

@@ -14,34 +14,40 @@ const RelatedProperty = () => {
   const [value, setValue] = useState();
   let [povezane,posatviPovezane]=useState();
 const nekretnine=useSelector(state=>state.nekretnine.niz);
-const [query,postaviQuery]=useState(null);
 const [related,postaviRelated]=useState([]);
 const [nekretnina,postaviNekretninu]=useState();
+const query=router.query.nekretnina;
 
-useEffect(()=>{
-  postaviQuery(router.query.nekretnina);
-
-},[])
+const randomizuj=(array)=> {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 const kreirajRelated=()=>{
-  let niz=[];
-  let podniz=Array.from(new Set(nekretnine.filter(x=>{return(x.status==nekretnina.status && x.tip==nekretnina.tip && x.grad==nekretnina.grad)})));
+  let podniz=Array.from(new Set(nekretnine.filter(x=>{return(x.status==nekretnina.status && x.tip==nekretnina.tip && x.grad==nekretnina.grad && x.id_nekretnina!=query)})));
   if(podniz.length<3){
-     podniz=Array.from(new Set([...podniz,...nekretnine.filter(x=>{return(x.status==nekretnina.status && x.tip==nekretnina.tip)})]));
+     podniz=Array.from(new Set([...podniz,...nekretnine.filter(x=>{return(x.status==nekretnina.status && x.tip==nekretnina.tip && x.id_nekretnina!=query)})]));
     if(podniz.length<3){
-      podniz=Array.from(new Set([...podniz,...nekretnine.filter(x=>{return(x.tip==nekretnina.tip)})]));
-      
+      podniz=Array.from(new Set([...podniz,...nekretnine.filter(x=>{return(x.tip==nekretnina.tip && x.id_nekretnina!=query)})]));
+      if(podniz.length<3){
+        podniz=Array.from(new Set([...podniz,...nekretnine.filter(x=>{return(x.status==nekretnina.status && x.id_nekretnina!=query)})]));
+        
+  
+      }
 
     }
+    console.log(podniz)
   }
   const rezultat=podniz.slice(0,3);
-  
-
-  postaviRelated(rezultat)
-
+  console.log(rezultat)
+  postaviRelated(randomizuj(rezultat))
 }
-useEffect(()=>{if(nekretnine.length!=0 && query!=null){postaviNekretninu(nekretnine.filter(x=>x.id_nekretnina==query)[0])}},[nekretnine,query])
+useEffect(()=>{if(nekretnine.length!=0 && query!=null){postaviNekretninu(nekretnine.filter(x=>x.id_nekretnina==query)[0])}},[query])
 useEffect(()=>{
-  if(nekretnina!=null){console.log(nekretnina);
+  if(nekretnina!=null){
+  console.log(nekretnina)
     kreirajRelated();}
 },[nekretnina])
 

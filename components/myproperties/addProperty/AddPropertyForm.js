@@ -7,8 +7,7 @@ import { ReactstrapInput, ReactstrapSelect,ReactstrapRadio } from '../../utils/R
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import { useState } from 'react';
-
-
+import { InputFormAdminForm } from '../../../data/inputForm';
 import { ucitajNekretnine } from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 import { useSelector,useDispatch } from "react-redux";
 
@@ -21,7 +20,10 @@ const AddPropertyForm = () => {
     const [slikaaa,postaviSliku]=useState('');
     const [slikeee,postaviSlike]=useState([]);
 
-    const [opcijee,postaviOpcije]=useState({status:[],tip:[],gradovi:[],drzave:[]});
+    const [opcijee,postaviOpcije]=useState({
+            "status":{ name: "status", label: "Status Nekretnine", size: "12", options: []},
+          "tip":{ name: "tip", label: "Tip Nekretnine", size: "12", options: [] },
+          "grad":{ name: "grad", label: "grad", size: "6", options: [] }});
     const getUploadParams = ({ file, meta }) => {
         const body = new FormData()
         body.append('slika', file)
@@ -29,40 +31,24 @@ const AddPropertyForm = () => {
       }
 
       let fetchNekretnine = async () => {
-        return await axios.get(`/api/nekretnine`);
+        return await axios.get(`https://white-homes.me/api/nekretnine`);
       };
     
     const nekretnine=useSelector(state=>state.nekretnine)
     const dispatch=useDispatch();
 
-
-
-
-      
-  useEffect(()=>{
-    console.log(slikeee)
-  },[slikeee])
     const handleChangeStatus = ({ meta, file, allFiles }, status) => { postaviSliku(file.name);
         if(!slikeee.includes(file.name)){postaviSlike([...slikeee,file.name]) }}
     
     // receives array of files that are done uploading when submit button is clicked
- 
-useEffect(()=>{
-    console.log(opcijee)
-},[opcijee]);
+
     
-    const opcije=async()=>await axios(`/api/opcijeNekretnina`);
 
-    useEffect(()=>{
-        opcije().then(x=>{
-            postaviOpcije({...opcijee,...x.data})});
-
-    },[])
+        
     const uploadSlike= (podaci) => {
     
         const podacii= new FormData(); 
         for(let i=0; i<podaci.length;i++){
-            console.log(podaci)
           podacii.append("slike", podaci[i]);}//add image to form object
         console.log(podacii.getAll("slike"))
         axios({
@@ -114,12 +100,10 @@ useEffect(()=>{
                
             })}
             onSubmit={(values) => {
-                console.log('aaa')
                 values.slika=slikaaa;
                 values.slike=[...slikeee];
 
-                console.log(values)
-                axios.post(`/api/sacuvaj-nekretninu`, {
+                axios.post(`https://white-homes.me/api/sacuvaj-nekretninu`, {
                     unos:values
                   })
                   .then(function (response) {
@@ -131,7 +115,8 @@ useEffect(()=>{
                     console.log(error);
                   });
                 toast.success("Vaši podaci su uspješno sačuvani");
-                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data))})
+                fetchNekretnine().then(nekretnine=>{
+                    dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)))})
                 setTimeout(()=>ruter.push("/admin/sve-nekretnine"),1000);
 
             }}
@@ -142,12 +127,12 @@ useEffect(()=>{
                             <Field name="naziv"  component={ReactstrapInput} className="form-control" placeholder="Dvosoban stan.." label="Naziv nekretnine" />
                         </Col>
                         <Col sm="4" className="form-group">
-                            <Field name="tipNekretnine" inputprops={{ options: opcijee.tip, defaultOption: "Tip Nekretnine" }} component={ReactstrapSelect} className="form-control" placeholder="villa" label="Tip Nekretnine" />
+                            <Field name="tipNekretnine" inputprops={{ options: InputFormAdminForm.tip.options, defaultOption: "Tip Nekretnine" }} component={ReactstrapSelect} className="form-control" placeholder="villa" label="Tip Nekretnine" />
                         </Col>
 
                         <Col sm='4' className="form-group">
                             <Field name="statusNekretnine" component={ReactstrapSelect} className="form-control" label="Status Nekretnine"
-                                inputprops={{ options: opcijee.status, defaultOption: "Status Nekretnine" }}
+                                inputprops={{ options: InputFormAdminForm.status.options, defaultOption: "Status Nekretnine" }}
                             />
                         </Col>
                         <Col sm="4" className="form-group">
@@ -155,12 +140,12 @@ useEffect(()=>{
                         </Col>
                         <Col sm="4" className="form-group">
                                 <Field name="država" component={ReactstrapSelect} className="form-control" label="Država"
-                                    inputprops={{ options: opcijee.drzave, defaultOption: "Država" }}
+                                    inputprops={{ options: ["Crna Gora"], defaultOption: "Država" }}
                                 />
                             </Col>
                             <Col sm="4" className="form-group">
                                 <Field name="grad" component={ReactstrapSelect} className="form-control" label="Grad"
-                                    inputprops={{ options: opcijee.gradovi, defaultOption: "Grad" }}
+                                    inputprops={{ options: InputFormAdminForm.grad.options, defaultOption: "Grad" }}
                                 />
                             </Col>
                             <Col sm="4" className="form-group">

@@ -93,6 +93,12 @@
     line-height: 1.6;
     font-size: 15px;
     margin-bottom: 20px;
+    display: -webkit-box; /* Omogućava podršku za line-clamp */
+    -webkit-box-orient: vertical; /* Postavlja orijentaciju na vertikalnu */
+    overflow: hidden; /* Sakriva višak teksta */
+    text-overflow: ellipsis; /* Dodaje tri tačke na kraju skraćenog teksta */
+    line-clamp: 3; /* Postavlja maksimalan broj linija (3 u ovom slučaju) */
+    -webkit-line-clamp: 3;
   }
 
   ul {
@@ -150,7 +156,7 @@
 
       &:hover {
         &:not(.no-sidebar)::-webkit-scrollbar-thumb {
-          background: rgba($visa, 0.2);
+          background: blue;
         }
       }
     }
@@ -326,7 +332,7 @@
         top: 20px;
         padding: 1px 8px 2px;
         border-radius: 5px;
-        background-color: #006a62;
+        background-color: #2A6FC2;
         svg {
           width: 14px;
           height: 14px;
@@ -461,7 +467,7 @@
       h6 {
         font-weight: 600;
         font-size: 17px;
-        color: #006a62;      
+        color: #2A6FC2;    
       }
       .icon-property {
         display: flex;
@@ -502,6 +508,7 @@
               }
               .property-svg {
                 fill: var(--theme-default);
+                width:16px;
               }
             }
           }
@@ -1187,7 +1194,13 @@
 }
 .video-property{
   .property-section .property-grid-3 .property-wrapper-grid.list-view .property-box .property-details p{
-    display: block !important;
+    display: -webkit-box; /* Omogućava podršku za line-clamp */
+    -webkit-box-orient: vertical; /* Postavlja orijentaciju na vertikalnu */
+    overflow: hidden; /* Sakriva višak teksta */
+    text-overflow: ellipsis; /* Dodaje tri tačke na kraju skraćenog teksta */
+    line-clamp: 3; /* Postavlja maksimalan broj linija (3 u ovom slučaju) */
+    -webkit-line-clamp: 3; 
+
   }
 }
 .property-grid-slider {
@@ -1415,10 +1428,8 @@
     .right-single {
       text-align: right;
 
-      .price {
-        color: var(--theme-default2);
+      .price {color: #006a62;
         margin-bottom: 0;
-
         span {
           color: $gray-60;
           font-size: 16px;
@@ -1715,6 +1726,12 @@
     }
   }
 }
+.category-property ul li {
+  display: block !important;
+  color: #878787;
+  font-family: Roboto, sans-serif;
+}
+
 
 .review {
   .review-box {

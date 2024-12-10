@@ -32,7 +32,7 @@ const BodyContent = (props) => {
             <Col xl="9" lg="8">
               <div className="description-section tab-description">
                 {props.imgSection && <ImageSection />}
-                <GalleryBox slike={props.slike} />
+                <GalleryBox  />
                 <SinglePropertySection />
               </div>
             </Col>
@@ -42,6 +42,8 @@ const BodyContent = (props) => {
               {nekretnine.length!=0 ? <Featured data={nekretnine}/> : null}
               {/*<RecentlyAdded />*/}
             </Sidebar>
+            <div  className="mobilni"><ContactInfo/></div>
+            
           </Row>
         </Container>
         <div className="related-abjust">

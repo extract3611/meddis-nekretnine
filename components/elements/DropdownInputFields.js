@@ -15,9 +15,7 @@ const DropdownInputFields = ({ label, filterValues, setFilterValues, lg, sm, sta
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState("true");
   const inputFilter = useSelector((state) => state.inputsReducer);
-useEffect(()=>{console.log(inputFilter)},[inputFilter]);
 if(inputFilter.tip==t("Zemljište")){
-  console.log("zemljiste")
   return (
     <>
     
@@ -98,6 +96,8 @@ else{return (<>{InputForm.slice(`${start && start}`, `${end && end}`).map((value
                 onClick={() => {
                   setFilterValues({ ...filterValues, ...{ [t(`${value.name}`)]: t(option) } });
                   dispatch({ type: `${value.name}`, payload: t(option)});
+                  console.log(filterValues);
+
                 }}>
                 {t(option)}
               </DropdownItem>

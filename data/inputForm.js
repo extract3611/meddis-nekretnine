@@ -1,12 +1,12 @@
 export const InputForm = [
   { name: "status", label: "Status Nekretnine", size: "12", options: ["Status Nekretnine", "Izdavanje", "Prodaja"] },
-  { name: "tip", label: "Tip Nekretnine", size: "12", options: ["Tip Nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila"] },
+  { name: "tip", label: "Tip Nekretnine", size: "12", options: ["Tip Nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila","Hotel", "Vikendica", "Investiciona nekretnina"] },
   { name: "grad", label: "Grad", size: "6", options: ["Grad","Bar","Podgorica","Nikšić","Pljevlja","Bijelo Polje","Berane","Cetinje", "Ulcinj","Budva","Kotor","Tivat","Herceg Novi","Kolašin","Žabljak"] },
   { name: "spavaceSobe", label: "Spavace Sobe", size: "6", options: ["Spavace Sobe", 1, 2, 3, 4] },
 ];
 
 export const createPropertyInputForms = [
-  { name: "tipNekretnine", label: "Tip Nekretnine", size: "12", options: ["Tip nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila"], validation: { required: true } },
+  { name: "tipNekretnine", label: "Tip Nekretnine", size: "12", options: ["Tip nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila","Hotel", "Vikendica", "Investiciona nekretnina"], validation: { required: true } },
   { name: "statusNekretnine", label: "Status Nekretnine", size: "12", options: ["Status Nekretnine", "Izdavanje", "Prodaja"], validation: { required: true } },
   { name: "cijenaNekretnine", label: "Cijena Nekretnine", placeHolder: "€2800", validation: { required: true } },
   { name: "maksSoba", label: "Sobe", size: "6", options: ["Maks. Soba", 1, 2, 3, 4, 5, 6], validation: { required: true } },
@@ -17,7 +17,13 @@ export const createPropertyInputForms = [
 ];
 export const InputFormAdmin = [
   { name: "status", label: "Status Nekretnine", size: "12", options: ["Status Nekretnine", "Izdavanje", "Prodaja"] },
-  { name: "tip", label: "Tip Nekretnine", size: "12", options: ["Tip nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila"] },
+  { name: "tip", label: "Tip Nekretnine", size: "12", options: ["Tip nekretnine", "Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila","Hotel","Vikendica","Investiciona nekretnina"] },
   { name: "grad", label: "grad", size: "6", options: ["Grad","Bar","Podgorica","Nikšić","Pljevlja","Bijelo Polje","Berane","Cetinje", "Ulcinj","Budva","Kotor","Tivat","Herceg Novi","Kolašin","Žabljak"] },
   
 ];
+export const InputFormAdminForm = 
+  {
+    "status":{ name: "status", label: "Status Nekretnine", size: "12", options: ["Izdavanje", "Prodaja"] },
+  "tip":{ name: "tip", label: "Tip Nekretnine", size: "12", options: ["Stan", "Kuća", "Poslovni prostor", "Zemljište","Vila","Hotel","Vikendica","Investiciona nekretnina"] },
+  "grad":{ name: "grad", label: "grad", size: "6", options: ["Bar","Podgorica","Nikšić","Pljevlja","Bijelo Polje","Berane","Cetinje", "Ulcinj","Budva","Kotor","Tivat","Herceg Novi","Kolašin","Žabljak"] }};
+  

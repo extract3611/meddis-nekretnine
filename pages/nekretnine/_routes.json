@@ -1,8 +1,8 @@
 {
     "/": {
-      "default": "/nekretnine",
-      "en": "/properties",
-      "ru": "/недвижимость"
+      "default": "nekretnine",
+      "en": "properties",
+      "ru": "недвижимость"
     },
     "sve-nekretnine": {
       "default": "sve-nekretnine",

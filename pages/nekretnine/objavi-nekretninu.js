@@ -23,7 +23,6 @@ const CreateProperty = () => {
     const [latest, setLatest] = useState();
     const [value,setValue]=useState();
     let sveNekretnine=useSelector(state=>state.nekretnine.niz)
-    useEffect(()=>{console.log(sveNekretnine)},[sveNekretnine])
     useEffect(() => {
      setValue(sveNekretnine)
      let x=[];
@@ -34,7 +33,6 @@ const CreateProperty = () => {
   
      };
      setLatest(x)
-     console.log(x)
     }, [sveNekretnine]);
 
     return (

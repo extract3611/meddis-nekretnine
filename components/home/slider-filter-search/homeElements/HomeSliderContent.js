@@ -17,8 +17,8 @@ const HomeSliderContent = ({ img, mainTitle,path,title}) => {
           <img src={img} className="img-fluid m-0" alt="" />
           <h6>{t(WantToBuyOrRentHome)}</h6>
           <h1>{t(mainTitle)}</h1>
-          <Link href={path} className="btn btn-gradient">
-          {t(title)}
+          <Link href={path}>
+          <a className="btn btn-gradient">{t(title)}</a>
           </Link>
         </div>
       </div>

@@ -82,7 +82,7 @@
 "Cijena - od više ka nižoj": "Цена - от высокой к низкой",
 "Datum - od niže ka višoj": "Цена - от низкой к высокой",
 "Kategorije": "Категории",
-"Kontakt informacije": "Контактная информация",
+"Kontakt informacije agenta": "Контактная информация",
 "Nekretnine": "Недвижимость",
 "nekretnine": "недвижимость",
 "sve nekretnine": "все недвижимость",
@@ -219,7 +219,11 @@
 "Dodatna pretraga":"Дополнительный поиск",
 "Cijena - od niže ka višoj":"Цена - от меньшей к большей",
 " Povrsina":"Область",
-"Spavaćih Soba":"Спальни"
+"Spavaćih Soba":"Спальни",
+"Osnovna djelatnost naše kompanije je posredovanje u prometu nepokretnosti (prodaja i izdavanje, stanova, kuća, vila, placeva, lokala, poslovnih objekata, industrijskog zemljišta) u Crnoj Gori, upravljanje sopstvenim i tuđim nekretninama, kao i brojne usluge u servisiranju vaše nekretnine.":"Основным направлением деятельности нашей компании является посредничество в сделках с недвижимостью (продажа и аренда квартир, домов, вилл, участков, магазинов, хозяйственных построек, промышленных земель) в Черногории, управление собственной и чужой недвижимостью, а также многочисленные услуги в обслуживании вашей недвижимости.",
+"Adresa nekretnine":"Адрес недвижимости"
+
+
 
 
 }

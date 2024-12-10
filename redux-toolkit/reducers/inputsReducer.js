@@ -3,8 +3,9 @@ import { createReducer } from "@reduxjs/toolkit";
 const inicijalnoStanje = {
  
 
-  cijena: [100, 200000],
-  povrsina: [20, 500],
+  cijena: [0, 4999999],
+  povrsina: [0, 5000],
+  sortirajPrema:"Datum - Najnoviji"
 };
 
 export const inputsReducer = createReducer(inicijalnoStanje, {

@@ -18,14 +18,14 @@
         }
         &:hover,
         &:focus {
-          background-color: var(--theme-default);
+          background-color: #1f3d75;
           border-color: var(--theme-default);
           color: $white;
         }
       }
       &.active {
         .page-link {
-          background-color: var(--theme-default);
+          background-color: #1f3d75;
           border-color: var(--theme-default);
           color: $white;
           z-index: 1;

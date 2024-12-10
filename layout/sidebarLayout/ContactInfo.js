@@ -16,26 +16,25 @@ const ContactInfo = () => {
 
   return (
     <div className='advance-card'>
-      <h6>{t("Kontakt informacije")}</h6>
+      <h6>{t("Kontakt informacije agenta")}</h6>
       <div className='category-property'>
         <div className='agent-info'>
           <div className='media'>
-            <img src='/assets/images/testimonial/3.png' className='img-50' alt='' />
+            <img src='/assets/images/Sanela-Licina-web-600x563.webp' className='img-50' alt='' />
             <div className='media-body ms-2'>
-              <h6>Maja</h6>
-              <p>office@whitehomes.com</p>
+              <h6>Sanela</h6>
+              <p>office@meddisgroup.me</p>
             </div>
           </div>
         </div>
         <ul>
           <li>
             <MapPin className='me-2' />
-            Marka Radovića 7, Central Point, Podgorica
-
+            Bulevar 24. Novembra, Bar
           </li>
           <li>
             <PhoneCall className='me-2' />
-            +382/67/201-391
+            <a href="tel:+382067623663">+382/ 067 623 663</a>
           </li>
         </ul>
       </div>

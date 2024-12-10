@@ -28,7 +28,7 @@ export default function Top() {
   console.log(korisnik);
   const odjaviti = async () => {
     const odgovor = await axios.post(
-      "http://localhost:8800/odjava",
+      "/odjava",
       {},
       { withCredentials: true }
     );
@@ -45,13 +45,13 @@ export default function Top() {
           style={{ display: "flex", flexDirection: "row" }}
         >
           <div style={{ marginRight: 25 }}>
-            <a href="+382/67/201-391">
+            <a href="tel:+38267201391">
               <FontAwesomeIcon
                 className="logc"
                 icon={faPhone}
                 style={{ marginRight: 5 }}
               ></FontAwesomeIcon>
-              <span className="spanicc">+382/67/201-391</span>
+              <span className="spanicc">+382/67/623-663</span>
             </a>
           </div>
 
@@ -62,7 +62,7 @@ export default function Top() {
                 style={{ marginRight: 5 }}
                 icon={faEnvelope}
               ></FontAwesomeIcon>
-              <span className="spanicc">office@whitehomes.com</span>
+              <span className="spanicc">office@meddisgroup.me</span>
             </a>
           </div>
           <div style={{ marginRight: 25 }}>
@@ -72,7 +72,7 @@ export default function Top() {
               icon={faLocationDot}
             ></FontAwesomeIcon>
             <span className="spanicc">
-              Marka Radovića 7, Central Point, Podgorica
+            Bulevar Revolucije C-7, Bar
             </span>
           </div>
         </div>

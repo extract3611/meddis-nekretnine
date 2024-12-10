@@ -92,26 +92,27 @@ const LogIn = () => {
                                     <Row className="social-connect">
                                         <Col sm='6'>
                                             <Link href="https://www.facebook.com/" className="btn btn-social btn-flat facebook p-0">
-                                                <i className="fab fa-facebook-f" />
-                                                <span>Facebook</span>
+                                                <div><i className="fab fa-facebook-f" />
+                                                <span>Facebook</span></div>
                                             </Link>
                                         </Col>
                                         <Col sm='6'>
                                             <Link href="https://twitter.com/" className="btn btn-social btn-flat twitter p-0">
-                                                <i className="fab fa-twitter" />
-                                                <span>Twitter</span>
+                                                <div><i className="fab fa-twitter" />
+                                                <span>Twitter</span></div>
                                             </Link>
                                         </Col>
                                         <Col sm='6'>
                                             <Link href="https://accounts.google.com/" className="btn btn-social btn-flat google p-0">
-                                                <i className="fab fa-google" />
-                                                <span>Google</span>
+                                                <div><i className="fab fa-google" />
+                                                <span>Google</span></div>
                                             </Link>
                                         </Col>
                                         <Col sm='6'>
                                             <Link href="https://www.linkedin.com/" className="btn btn-social btn-flat linkedin p-0">
+                                            <div>
                                                 <i className="fab fa-linkedin-in" />
-                                                <span>Linkedin</span>
+                                                <span>Linkedin</span></div>
                                             </Link>
                                         </Col>
                                     </Row>

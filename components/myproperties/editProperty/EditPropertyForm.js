@@ -46,26 +46,20 @@ const pretvaranjeSlikaFajl= ()=>{
         res.arrayBuffer().then(buf => {
           let file = new File([buf], slikeGalerijaUrl[x], { type: 'image/jpeg' })
           nizzzzz.push(file);
-          console.log(file)
 
         })
       })
 }
-console.log(nizzzzz)
 postaviFajlove(nizzzzz)
 
 }
 useEffect(()=>{
     if(nekretnina!=undefined){
         if(fajl===null){
-            console.log('a')
     pretvaranjeSlikeFajl();}
     }
-    console.log(fajl)
 },[nekretnina])
-useEffect(()=>{
-console.log(fajl)    
-},[fajl])
+
     const [opcijee,postaviOpcije]=useState({status:[],tip:[],gradovi:[],drzave:[]});
     const getUploadParamsSlika = ({ file, meta }) => {
         const body = new FormData()
@@ -77,16 +71,11 @@ console.log(fajl)
         body.append('slika', file)
         return { url: `/api/upload-sliku`, body }
       }
-  useEffect(()=>{
-    console.log(slikeee)
-  },[slikeee])
+
   const handleChangeStatusSlika = ({ file,meta }, status) => {
     
         postaviSliku(file.name);
-        console.log(file.name)
         postaviFajl([])
-        console.log('aaa')
-
        }
 let nuz=[];
        const handleChangeStatusSlike = ({ file,meta }, status) => {
@@ -94,14 +83,11 @@ let nuz=[];
             postaviSlike(fajlovi.map(x=>x.name))
             postaviFajlove([]);
         }
-        console.log(meta,"status"+status)
 if(status=="done" && !slikeee.includes(file.name)){
     nuz.push(file.name)
     postaviSlike([...slikeee,...nuz])}
     else if(status=="removed"){
-        console.log(file.name)
         let nizzz=slikeee;
-        console.log(nizzz)
         let index = nizzz.indexOf(file.name);
         if (index !== -1) {
             nizzz.splice(index, 1);
@@ -130,33 +116,25 @@ if(status=="done" && !slikeee.includes(file.name)){
 
     },[])
 useEffect(()=>{
-    console.log(fajlovi)
     if(fajlovi.length!=0){
-    console.log(fajlovi)
     let slidze=fajlovi.map(x=>x.name)
-    console.log(slidze)
     postaviSlike([...slidze])
 }},[fajlovi])
     useEffect(()=>{
         postaviNekretninu(nekretnine.filter(nekretnina=>nekretnina.id_nekretnina==ruter.query["izmijeni-nekretninu"])[0]);
     
-        console.log(nekretnine)
     },[nekretnine,ruter])
     useEffect(()=>{
         if(nekretnina!=null){
-        console.log(nekretnina)
         axios.post(`/api/galerija`,{id:nekretnina.id_nekretnina}).then(response=>postaviSlikeGalerijaUrl(response.data.map(x=>`${x.slika}`)))
       
 }},[nekretnina])
-useEffect(()=>{console.log(slikaaa)
-},[slikaaa])
+
 useEffect(()=>{
     if(slikeGalerijaUrl.length!=0){
-        console.log(slikeGalerijaUrl)
         
         pretvaranjeSlikaFajl();
 }},[slikeGalerijaUrl])
-useEffect(()=>{console.log(fajl)},[fajl])
 let fetchNekretnine = async () => {
     return await axios.get(`/api/nekretnine`);
   };
@@ -164,7 +142,6 @@ let fetchNekretnine = async () => {
     
         const podacii= new FormData(); 
         for(let i=0; i<podaci.length;i++){
-            console.log(podaci)
           podacii.append("slike", podaci[i]);}//add image to form object
         console.log(podacii.getAll("slike"))
         axios({
@@ -217,7 +194,6 @@ if(nekretnina!=null && fajl!=null){
                
             })}
             onSubmit={(values) => {
-                console.log('slikaa'+slikaaa)
                 values.slika=slikaaa;
                 values.slike=[...slikeee];
 
@@ -234,8 +210,8 @@ if(nekretnina!=null && fajl!=null){
                     console.log(error);
                   });
                 toast.success("Vaši podaci su uspješno sačuvani");
-                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data));
-                setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},1000)});}}
+                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
+                setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},2000)});}}
             render={() => (
                 <Form>
                     <Row className="gx-3">

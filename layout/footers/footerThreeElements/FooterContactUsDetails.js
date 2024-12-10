@@ -10,20 +10,20 @@ const FooterContactUsDetails = () => {
     <Col xl="3">
       <div className="footer-details text-center">
         <Logo3 />
-        <p>{t("White Homes je renomirana kompanija koja se specijalizovala za iznajmljivanje i prodaju nekretnina. Njihov tim stručnjaka pruža vrhunsku uslugu klijentima, pomažući im pronaći savršeni dom ili ulaganje, sa fokusom na visoku profesionalnost i zadovoljstvo klijenata.")}</p>
+        <p>{t("Sa tradicijom dugom 26 godina, MEDDiS Group d.o.o. je porodično preduzeće koje uspješno posluje u oblasti prometa nekretnina i građevinarstva. Naša posvećenost kvalitetu, stručnost i iskustvo čine nas idealnim izborom za sve koji traže profesionalnu podršku u oblasti nekretnina.")}</p>
         <h6>{t("Kontaktirajte nas")}</h6>
         <ul className="icon-list">
           <li>
-            <Link href="https://www.google.com/maps/dir//white+homes+nekretnine/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x134deb4348f9770d:0x939add7bda208eb1?sa=X&ved=2ahUKEwi25IWk4rv_AhU2_rsIHZghD_wQ9Rd6BAhBEAQ">
+            <Link href="https://www.google.com/maps/place/MEDDiS+Group/@42.0959757,19.0977161,15z/data=!4m2!3m1!1s0x0:0xf89a720f0273e75c?sa=X&ved=1t:2428&ictx=111">
               <i className="fas fa-map-marker-alt"></i>
             </Link>
           </li>
           <li>
-          <a href="tel:+382 67 201 391"><i className="fas fa-phone-alt"></i>
+          <a href="tel:+382 67 623 663"><i className="fas fa-phone-alt"></i>
           </a> 
           </li>
           <li>
-          <a href = "mailto: office@whitehomes.me">
+          <a href = "mailto: office@meddisgroup.me">
 
               <i className="fas fa-envelope"></i>
               </a>          </li>

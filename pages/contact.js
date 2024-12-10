@@ -23,7 +23,12 @@ const BodyContent = () => {
 };
 
 BodyContent.getLayout = function getLayout(page) {
-  return <Layout name="Contact - White Homes real estate agency"  title="Contact - White Homes real estate agency" description="Whether you are looking for an investment, residential or vacation property, White Homes will help you find the ideal property for your needs. Contact us now.">{page}</Layout>;
+  return  <Layout 
+  title="Objavite vašu nekretninu potpuno besplatno!" 
+  description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, ili ipak želite da ulistate vašu nekretninu, naša agencija vam nudi najbolja rešenja."
+>
+  {page}
+</Layout>;
 };
 
 

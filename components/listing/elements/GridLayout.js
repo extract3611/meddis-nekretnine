@@ -16,7 +16,6 @@ const GridLayout = ({ value, grid, listSize, relativeSlider, video, infiniteScro
   useEffect(() => {
     gridDispatch({ type: "totalPages", payload: Math.ceil(showProduct?.length / cardToShow) });
     gridDispatch({ type: "productCount", payload: showProduct?.length });
-    console.log("show product",showProduct)
   }, [showProduct, cardToShow]);
   if(showProduct && showProduct.length!=0){
 

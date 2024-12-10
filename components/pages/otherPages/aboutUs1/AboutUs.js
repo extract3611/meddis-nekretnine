@@ -18,13 +18,13 @@ const AboutUsSection = () => {
                 <div className='col-xl-7 col-lg-7'>
                   <div className='about-content'>
                     <h1>
-                    {t("Opširan asortiman usluga koje se odnose na nekretnine u Crnoj Gori.")}
+                    {t("Tradicija i iskustvo od 26 godina su naša najbolja preporuka!")}
                     </h1>
                     <p className='font-roboto'>
-                    {t("White  Homes  je brend koji posluje pod kompanijom 28 Real Estate D.o.o. I nudi opširan asortiman usluga koje se onose na nekretnine u Crnoj Gori. Osnovna djelatnost naše kompanije je posredovanje u prometu nepokretnosti (prodaja i izdavanje, stanova, kuća, vila, placeva, lokala, poslovnih objekata, industrijskog zemljišta) u Crnoj Gori, upravljanje sopstvenim i tuđim nekretninama, kao i brojne usluge u servisiranju vaše nekretnine.Visok stepen profesionalnosti, predanost u radu, posvećenost klijentima, timski rad zaposlenih, saradnja sa kolegama iz konkurentskih firmi, istakli su našu agenciju na tržištu nekretnina kao sigurnog partnera i posrednika koji će vam uz potpunu diskreciju i pravnu sigurnost obaviti kupoprodajnu transakciju i preporučiti nas dalje.Naša specijalnost su luksuzni i novi, stanovi, kuće i poslovni prostori, nekretnine u Podgorici i nekretnine na crnogorskom primorju.")}<br/>
-<strong>{t("Prodavcima i kupcima garantujemo apsolutnu transparentnost i jasnoću u svim transakcijama.")}</strong><br/>
-<strong>{t("Zakupcima pružamo usluge efikasnog pronalaženja nepokretnosti koje najviše odgovaraju njihovim željama i potrebama uz obavezan obilazak nepokretnosti i savjetodavnu podršku.")}</strong>
-<strong>{t("Zakupodavcima pružamo pouzdanu i ozbiljnu prezentaciju njihovih nekretnina velikom broju potencijalnih zakupaca.")}</strong>
+                    {t("S tradicijom dugom 26 godina, MEDDiS Group d.o.o. je porodično preduzeće koje uspješno posluje u oblasti prometa nekretnina i građevinarstva. Naša posvećenost kvalitetu, stručnost i iskustvo čine nas idealnim izborom za sve koji traže profesionalnu podršku u oblasti nekretnina.")}<br/>
+<strong>{t("Bavimo se prodajom, kupovinom i iznajmljivanjem nekretnina, uključujući stanove, kuće, vile, poslovne prostore i zemljišta širom Crne Gore. Ukoliko tražite nekretninu za život, poslovanje ili investiciju, naš tim stručnjaka će se pobrinuti da pronađete idealno rješenje.")}</strong><br/>
+<strong>{t("Pored prometa nekretnina, MEDDiS Group d.o.o. se bavi projektovanjem i izvođenjem visokogradnje i niskogradnje, a iza nas stoji veliki broj uspješno realizovanih objekata. Ipak, naš fokus na tržištu nekretnina omogućava nam da klijentima pružimo vrhunsku uslugu, uz poštovanje svih standarda i individualnih zahtjeva.")}</strong>
+<strong>{t("Za nas je povjerenje temelj svakog odnosa, a zadovoljstvo klijenata naš najvažniji cilj. Ako tražite pouzdanog partnera za nekretnine u Crnoj Gori, tu smo da vas podržimo u svakom koraku procesa.")}</strong>
 <strong>{t("Ističemo kvalitetnu ponudu za:")}</strong>
 <ol style={{ listStyleType: 'circle',
     listStyle: 'circle',
@@ -32,14 +32,17 @@ const AboutUsSection = () => {
 
    
 }}>
-<li className="list-itemm">{t("Oglašavanje vaše imovine.")}</li>
-<li className="list-itemm">{t("Posvećenost u odabiru kvalitetnih partnera za kupovinu ili zakup vaše nekretnine")}</li>
-<li className="list-itemm">{t("Organizovanje rezervacija i ugošćavanje gostiju.")}</li>
-<li className="list-itemm">{t("Čišćenje prije dolazaka gostiju")}</li>
-<li className="list-itemm">{t("Čišćenje po odlasku stanara")}</li>
-<li className="list-itemm">{t("Generalno čišćenje")}</li>
-<li className="list-itemm">{t("Dubinsko čišćenje i usisavanje najkvalitetnijom opremom.")}</li>
-<li className="list-itemm">{t("Redovno održavanje nekretnina i stalni kontakt sa stanarima")}</li></ol>
+<li className="list-itemm">{t("Oglašavanje vaše nekretnine na relevantnim platformama radi postizanja maksimalne vidljivosti.")}</li>
+<li className="list-itemm">{t("Pomoć u pronalaženju idealne nekretnine za kupovinu, prilagođene vašim potrebama.")}</li>
+<li className="list-itemm">{t("Profesionalna procjena tržišne vrijednosti nekretnina za kupovinu ili prodaju.")}</li>
+<li className="list-itemm">{t("Izrada personalizovane strategije za efikasnu prodaju ili zakup nekretnine.")}</li>
+<li className="list-itemm">{t("Pravna podrška i savjetovanje tokom cijelog procesa kupoprodaje.")}</li>
+<li className="list-itemm">{t("Brza i profesionalna komunikacija s potencijalnim kupcima ili zakupcima.")}</li>
+<li className="list-itemm">{t("Osiguravanje kvalitetnih partnera za kupovinu ili zakup vaše nekretnine.")}</li>
+
+
+
+</ol>
 {t("Kad korisite usluge kompanije za odrzavanje I izdavanje nekrentina mozete biti sigurni da to zaista vrijedi.")}
                     </p>
                   </div>

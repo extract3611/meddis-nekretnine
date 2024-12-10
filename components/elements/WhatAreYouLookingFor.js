@@ -13,10 +13,11 @@ const WhatAreYouLookingFor = () => {
         {AppPropertyData.WhatAreYouLookingFor.map((data, i) => (
           <li key={i}>
             <Link href={data.path} className="looking-icon">
-              <svg className="property-svg">
+            <a className="looking-icon">
+              
+              <h6><svg className="property-svg">
                 <use xlinkHref={data.img}></use>
-              </svg>
-              <h6>{t(data.title)}</h6>
+              </svg>{t(data.title)}</h6></a>
             </Link>
           </li>
         ))}

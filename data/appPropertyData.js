@@ -7,15 +7,17 @@ export const AppPropertyData = {
     { title: "Poslovni", img: "/assets/svg/icons.svg#business", path: "/nekretnine/pretrazi-nekretninu?filtriraniPodaci=%257B%2522cijena%2522%253A%255B100%252C200000%255D%252C%2522povrsina%2522%253A%255B20%252C500%255D%252C%2522tip%2522%253A%2522Poslovni%2520prostor%2522%257D" },
   ],
   PropertyServices: [
-    { title: "Oglašavanje, promociju i prodaju nekretnina.", img: <DollarSign />, details:"Naš tim stručnjaka će vam pomoći da efikasno prodate vašu nekretninu. Obezbeđujemo marketinške aktivnosti, pregovaranje sa potencijalnim kupcima i pravnu podršku tokom cijelog procesa prodaje." },
-    { title: "Izdavanje nekretnina, organizovanje rezervacija i ugošćavanje gostiju.", img: <Bell />, details: "Pružamo vam podršku u pronalaženju kvalitetnih zakupaca, sastavljanju zakupnih ugovora, organizaciji pregleda nekretnina i rešavanju administrativnih zadataka." },
-    { title: "Redovno održavanje nekretnina i stalni kontakt sa stanarima.", img: <Home />, details: "Naša agencija za nekretnine pruža sveobuhvatnu uslugu održavanja nekretnina kako bismo vam omogućili da vaše nekretnine ostanu u besprekornom stanju. Bez obzira da li ste vlasnik stambenih ili poslovnih prostora, naš tim stručnjaka će se pobrinuti za sve vaše potrebe u vezi sa održavanjem nekretnina." },
+    { title: "Kupovina imovine", img: <Home />, details:"Pomažemo vam da pronađete idealnu nekretninu iz naše bogate baze koja uključuje stanove, kuće, vile i zemljišne parcele. Naši stručnjaci pružaju podršku od početnih konsultacija, organizovanja pregleda i pregovora, do kompletne pravne obrade i registracije vlasništva, sve u skladu sa zakonima Crne Gore." },
+    { title: "Prodaja nekretnina", img: <DollarSign />, details: "Učinite prodaju vaše nekretnine brzom i profitabilnom uz našu pomoć. Nudimo analizu tržišne vrednosti, kreiranje marketinške strategije, organizaciju pregleda za potencijalne kupce, vođenje pregovora i pravnu podršku tokom čitavog procesa prodaje." },
+    { title: "Iznajmljivanje nekretnina.", img: <Bell />, details: "Olakšavamo dugoročno iznajmljivanje stanova, kuća i poslovnih prostora. Naši stručnjaci biraju opcije po vašim kriterijumima, organizuju obilaske i zaključuju ugovore na crnogorskom i ruskom jeziku, uz savete o svim pravnim i poreskim pitanjima." },
+    { title: "Podrška transakcijama.", img: <DollarSign />, details: "Pratimo vas kroz sve faze kupoprodajnih transakcija, uključujući proveru dokumenata, zakazivanje kod notara, registraciju vlasništva i rešavanje komunalnih pitanja. Naša potpuna podrška je besplatna pri kupovini iz naše baze, dok se pojedinačne usluge mogu naručiti po potrebi." },
+
   ],
   OurNewOffer: [
     
-    { title: "Kupujete ili prodajete nekrentinu?", details: "Povjerenje zajednice i naših klijenata kao dokaz našeg integriteta i profesionalne etike .", img: "/assets/images/others/icon-2.png" },
-    { title: "Tražite svoj dom?", details: "Stotine novih ponuda svakim danom. Najpouzdanija baza nekretnina u crnoj gori.", img: "/assets/images/others/icon-1.png" },
-    { title: "Zašto izabrati White Homes?", details: "Klijenti bi rado dali povjerenje našoj firmi za nekretnine zbog naše stručnosti, predanosti pružanju vrhunske usluge i dokazane sposobnosti da ostvarimo njihove ciljeve i potrebe u svijetu nekretnina.", img: "/assets/images/others/icon-1.png" },
+    { title: "Profesionalni pristup.", details: "Naša agencija zapošljava iskusne i licencirane agente koji posjeduju duboko poznavanje tržišta nekretnina. Njihova stručnost i profesionalnost garantuju da će vaši interesi biti zastupljeni na najbolji mogući način.", img: "/assets/images/others/icon-2.png" },
+    { title: "Zašto izabrati našu agenciju za nekretnine?", details: "U našoj ponudi možete pronaći širok spektar nekretnina – od luksuznih vila i stanova u centru grada, do pristupačnih kuća i apartmana na periferiji. Bez obzira na vaše želje i budžet, sigurni smo da imamo nešto što će vam savršeno odgovarati.", img: "/assets/images/others/icon-1.png" },
+    { title: "Širok asortiman nekretnina.", details: "Klijenti bi rado dali povjerenje našoj firmi za nekretnine zbog naše stručnosti, predanosti pružanju vrhunske usluge i dokazane sposobnosti da ostvarimo njihove ciljeve i potrebe u svijetu nekretnina.", img: "/assets/images/others/icon-1.png" },
   ],
   corporateLayoutHomeBanner: [
     {

@@ -373,8 +373,31 @@ div.editable::-webkit-scrollbar-thumb {
       .card-grid{
         grid-template-columns: repeat(2, 1fr); 
       }
+        .mobilni{display:none !important}
+
     }
-    
+     .category-property ul li {
+      display: block;
+      color: #878787;
+      font-family: Roboto, sans-serif;
+  }
+   .agent-info {
+    margin-bottom: 20px;
+}
+.mobilni{border-bottom: 1px solid #80808057;}
+    .advance-card > h6 {
+      color: black;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+      position: relative;
+      font-weight: 600;
+      font-size: 16px;
+  }
+    .mobilni{display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 30px 0px;}
     @media(min-width: 960px){
       .card-grid{
         grid-template-columns: repeat(4, 1fr); 
@@ -649,20 +672,23 @@ div.editable::-webkit-scrollbar-thumb {
   margin-top: -1rem; }
       #rs-services > p{font-size:20px}      .title ol .list-itemm{font-size:17px}
   @media only screen and (max-width: 480px) {
+    .front-content-part .front-title-part .title {
+      text-align: center;}
 .slicica{    width: 30px;
   position: absolute;
   font-size: 30px !important;
   z-index: 5555;
   left: 50%;
   top: 50%;}
-  .card__heading{font-size: 3.75rem !important;}
+  
+  .card__heading{font-size: 4rem !important;}
     #nivoSlider,.video,.bend.niceties{    height: 100% !important;
       position: relative;}
       .rs-slider.rs-slider-style3 .content-part .sl-title {
         font-size: 45px !important;
         line-height: 70px !important;
       }
-      #__next > div.komplet > div.pozadina.container-fluid > h1{font-size: 2.5rem !important;}
+      #__next > div.komplet > div.pozadina.container-fluid > h1{font-size: 4rem !important;}
       .card__category{    font-size: 2rem !important;}
       #rs-services > p{text-align: center;
         padding: 10px;
@@ -674,6 +700,10 @@ div.editable::-webkit-scrollbar-thumb {
       .rs-slider.rs-slider-style3 .content-part .sl-title-small{
         font-size: 21px  !important;
         line-height: 48px !important;
+        margin: 0 20px 30px !important;
+      }
+      .front-content-part .front-title-part .title a {
+        font-size:20px;
       }
       .full-width-header .rs-header .toolbar-area.toolber-style3{display:none}
       .video{object-fit: cover;}
@@ -1704,7 +1734,7 @@ blockquote:before {
   font-weight: 500;
 }
 .readon.slide-con:hover {
-  background: #fffe2b;
+  background: white;
 }
 .readon.view-slide {
   position: relative;
@@ -1716,6 +1746,8 @@ blockquote:before {
   color: #ffffff;
   text-transform: uppercase;
 }
+#rs-services > p{margin:40px 0px !important;}
+
 .readon.view-slide:after {
   position: absolute;
   content: "";

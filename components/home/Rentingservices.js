@@ -28,7 +28,7 @@ const RentingServices = ({ value }) => {
                   <div className="service-box">
                     <div className="icon-round"><img src={data.img}/></div>
                     <h3>
-                      <Link href="/pages/other-pages/services">{t(data.title)}</Link>
+                      {t(data.title)}
                     </h3>
                     <p>{t(data.details)}</p>
                   </div>

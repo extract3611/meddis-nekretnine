@@ -23,7 +23,7 @@ const BodyContent = () => {
 };
 
 BodyContent.getLayout = function getLayout(page) {
-  return <Layout name="Kontakt - Agencija za nekretnine White Homes" title="Kontakt - Agencija za nekretnine White Homes" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, White Homes će vam pomoći da pronađete idealnu nekretninu za vaše potrebe..Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.">{page}</Layout>;
+  return <Layout name="Kontakt - Agencija za nekretnine Meddis group" title="Kontakt - Agencija za nekretnine Meddis Group" description="Ukoliko tražite nekretninu za investiciju, stanovanje ili odmor, Meddis će vam pomoći da pronađete savršenu nekretninu za vaše potrebe..Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.">{page}</Layout>;
 };
 
 

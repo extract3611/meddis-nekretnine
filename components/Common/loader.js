@@ -1,6 +1,8 @@
 import React from "react";
-
+import { useTranslation } from "next-i18next";
 const LoadingScreen = () => {
+  const {t}=useTranslation("common");
+
   return (
     <div className="loader-wrapper">
       <div className="row loader-text">
@@ -9,7 +11,7 @@ const LoadingScreen = () => {
         </div>
         <div className="col-12">
           <div>
-            <h3 className="mb-0">Sadržaj se učitava, molimo vas budite stprljivi..</h3>
+            <h3 className="mb-0">{t("Sadržaj se učitava...")}</h3>
           </div>
         </div>
       </div>

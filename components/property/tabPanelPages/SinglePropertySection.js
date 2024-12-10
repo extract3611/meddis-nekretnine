@@ -27,7 +27,7 @@ const SinglePropertySection = () => {
               setActive("Details");
             }}
             active={active === "Details" && true}>
-            {t("Detalji")}
+            <button className="btn btn-gradient">{t("Detalji")}</button>
           </NavLink>
         </NavItem>
         

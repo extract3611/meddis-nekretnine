@@ -206,7 +206,7 @@ export const Assignessdata = [
     },
     {
         id: 2,
-        img: '/assets/images/avatar/3.jpg',
+        img: '/assets/images/Sanela-Licina-web-600x563.webp',
         name: 'Greta Life',
         role: 'Pest control',
         open: '8',

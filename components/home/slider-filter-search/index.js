@@ -10,11 +10,12 @@ import BannerSection from "./Banner";
 import BrandSection from "./Brand";
 import CitiesWisePropertySection from "./CitiesWiseProperty";
 import FeatureSection from "./Feature";
-import HomeBannerSection from "./HomeBanner";
+import HomeBannerSection from "../search-tab/HomeBanner";
 import OfferSection from "./Offer";
 import PropertySection from "./Property";
 import SalePropertySection from "./SaleProperty";
 import TestimonialSection from "./Testimonial";
+import TrustIndexComponent from "../../Review"
 import { useSelector } from "react-redux";
 const BodyContent = () => {
   const [value, setValue] = useState();
@@ -32,6 +33,7 @@ let sveNekretnine=useSelector(state=>state.nekretnine.niz)
       <FeatureSection value={sveNekretnine} />
       <SalePropertySection value={sveNekretnine} />
       <OfferSection value={AppPropertyData.OurNewOffer} />
+      <TrustIndexComponent/>
     </>
   );
 };

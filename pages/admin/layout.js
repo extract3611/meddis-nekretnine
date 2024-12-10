@@ -33,7 +33,7 @@ const dispatch=useDispatch();
     return await axios.post(`/api/administracija`,{x});
   }
   useEffect(() => {if(korisnik==null && document.cookie.includes("autentikacija")){
-    console.log(dohvatiKolacic().then(x=>dispatch(prijavaa(x.data),postaviLoader(true))))
+    dohvatiKolacic().then(x=>dispatch(prijavaa(x.data),postaviLoader(true)))
     console.log(document.cookie)}
     setToggle(window.innerWidth > 991);
     window.addEventListener('resize', handleResize);

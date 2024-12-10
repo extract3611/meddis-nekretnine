@@ -2,10 +2,10 @@ export const FooterDataHomee = {
     contactDetails: [
       { iconsClass: "fas fa-map-marker-alt", detail: "Marka Radovića 7, Central Point - Podgorica, Crna Gora" },
       { iconsClass: "fas fa-phone-alt", detail: "(+382) 67-201-391" },
-      { iconsClass: "fas fa-envelope", detail: "office@whitehomes.me" },
+      { iconsClass: "fas fa-envelope", detail: "office@meddisgroup.me" },
     ],
     description: "Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, ova White Homes će vam pomoći da pronađete idealnu nekretninu za vaše potrebe.. Dugogodišnje iskustvo i stručni tim, garantuje profesionalnu etiku i apsolutno zadovoljstvo klijenata.",
-    brand_description: "Agencija za nekretnine White Homes je renomirana kompanija koja se specijalizirala za iznajmljivanje i prodaju nekretnina. Njihov tim stručnjaka pruža vrhunsku uslugu klijentima, pomažući im pronaći savršeni dom ili ulaganje, s fokusom na visoku profesionalnost i zadovoljstvo klijenata.",
+    brand_description: "S tradicijom dugom 26 godina, MEDDiS Group d.o.o. je porodično preduzeće koje uspješno posluje u oblasti prometa nekretnina i građevinarstva. Naša posvećenost kvalitetu, stručnost i iskustvo čine nas idealnim izborom za sve koji traže profesionalnu podršku u oblasti nekretnina.",
     about: {
       title: "Korisne veze",
       children: [
@@ -59,7 +59,7 @@ export const FooterDataHomee = {
       ],
     },
     social: {
-      title: "Društvene",
+      title: "Društvene mreže",
       children: [
         { title: "Facebook", link: "https://www.facebook.com/info.whitehomesrentals/" },
         { title: "Instagram", link: "https://www.instagram.com/white_homes_nekretnine/" },

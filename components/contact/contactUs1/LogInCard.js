@@ -14,6 +14,8 @@ import { Mail, Phone, User } from "react-feather";
 import { Button, Col, Form, FormGroup, Input, InputGroup, InputGroupText, Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from 'react-toastify';
+
 import { useTranslation } from "next-i18next";
 const LogInCard = () => {
   const {t}=useTranslation("common");
@@ -109,7 +111,7 @@ const LogInCard = () => {
             <div></div>
             <Button className='btn btn-gradient btn-flat' onClick={(e)=>{
               if(check==true){console.log(forma);
-              axios.post("/api/kontaktForma",{to:forma.email,subject:`Kontakt forma - White homes nekretnine - klijent: ${forma.ime} `,message:forma.poruka,ime:forma.ime,email:forma.email,kontakt:forma.kontaktTel}).then(res=>console.log(res.data)).catch(err=>console.log(err))
+              axios.post("/api/kontaktForma",{to:forma.email,subject:`Kontakt forma - Meddis nekretnine - klijent: ${forma.ime} `,message:forma.poruka,ime:forma.ime,email:forma.email,kontakt:forma.kontaktTel}).then(res=>console.log(res.data)).catch(err=>console.log(err)).then(toast.success(t("Vaša poruka je uspješno poslata."))).catch(err=>toast.error("Vaša poruka nije poslata, pokušajte ponovo."))
               }}} >
 {t("Pošalji poruku")}            </Button>
           </div>

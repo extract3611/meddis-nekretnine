@@ -14,7 +14,7 @@ const OfferSection = ({ value }) => {
         <Row>
           <Col>
             <div className="title-1 text-white">
-              <span className="label label-gradient">{t("White homes nekretnine")}</span>
+              <span className="label label-gradient">{t("Meddis group nekretnine")}</span>
               <h2>{t("Vaš pouzdan partner")}</h2>
               <hr />
             </div>
@@ -29,7 +29,7 @@ const OfferSection = ({ value }) => {
                             <img src={data.img} alt="" />
                           </div>
                           <div className="media-body">
-                            <h6>White Homes</h6>
+                            <h6>Meddis group nekretnine</h6>
                             <h3>{t(data.title)}</h3>
                             <p>{t(data.details)}</p>
                           </div>

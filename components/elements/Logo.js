@@ -16,7 +16,6 @@ const Logo2 = () => {
     <div className="brand-logo">
       <Link href="/">
         <img src="/assets/images/logo.svg" alt="" className="img-fluid for-light" />
-        <img src="/assets/images/logo.svg" alt="" className="img-fluid for-dark" />
       </Link>
     </div>
   );
@@ -47,7 +46,6 @@ const Logo5 = () => {
     <div className="brand-logo">
       <Link href="/">
         <img src="/assets/images/logo.svg" alt="" className="img-fluid for-light" />
-        <img src="/assets/images/logo.svg" alt="" className="img-fluid for-dark" />
       </Link>
     </div>
   );
@@ -68,7 +66,6 @@ const Logo7 = () => {
     <div className="brand-logo">
       <Link href="/">
         <img src="/assets/images/logo/10.png" alt="" className="img-fluid for-light" />
-        <img src="/assets/images/logo/1.png" alt="" className="img-fluid for-dark" />
       </Link>
     </div>
   );

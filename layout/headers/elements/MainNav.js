@@ -43,10 +43,13 @@ const MainNav = ({ center, icon }) => {
                     setIsOpenChild={setIsOpenChild}
                     isOpenNestedChild={isOpenNestedChild}
                     setIsOpenNestedChild={setIsOpenNestedChild}
-                    icon={icon}
+openNavbar={openNavbar}        
+setOpenNavbar={setOpenNavbar}        
+
+icon={icon}
                   />
                 ) :  (
-                  <MegaMenu navTitle={navTitle} isOpen={isOpen} setIsOpen={setIsOpen} i isOpenNestedChild={isOpenNestedChild} setIsOpenNestedChild={setIsOpenNestedChild} />
+                  <MegaMenu  setOpenNavbar={setOpenNavbar}       navTitle={navTitle} isOpen={isOpen} setIsOpen={setIsOpen} i isOpenNestedChild={isOpenNestedChild} setIsOpenNestedChild={setIsOpenNestedChild} />
                 )}
               </Fragment>
             ))}
@@ -55,7 +58,6 @@ const MainNav = ({ center, icon }) => {
             <div className="brand-logo">
               <Link href="/home/slider-filter-search">
                 <img src="/assets/images/logo/4.png" alt="" className="img-fluid for-light" />
-                <img src="/assets/images/logo/9.png" alt="" className="img-fluid for-dark" />
               </Link>
             </div>
           )}

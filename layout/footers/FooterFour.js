@@ -16,7 +16,6 @@ const FooterFour = () => {
               logo={
                 <Link href="/">
                   <img src="/assets/images/logo/4.png" className="for-light" alt="" />
-                  <img src="/assets/images/logo/9.png" className="for-dark" alt="" />
                 </Link>
               }
               isActive={isActive}

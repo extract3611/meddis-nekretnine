@@ -58,8 +58,9 @@ const AboutSection = ({ value }) => {
                             </span>
                             <p className="font-roboto">{data.detail}</p>
                             <Link href="/agent/agent-profile" className="btn btn-gradient btn-pill mt-2">
+                            <div>
                               <Eye />
-                              {ViewPortfolio}
+                              {ViewPortfolio}</div>
                             </Link>
                           </div>
                         </Col>

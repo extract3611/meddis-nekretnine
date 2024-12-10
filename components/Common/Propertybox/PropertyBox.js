@@ -39,8 +39,9 @@ const PropertyBox = ({ data,relativeSlider }) => {
           </div>
           <div className="property-details">
             <span className="font-roboto">{data.grad} </span>
-            <Link href={Array.isArray(data.img) ? `/property/image-slider/?naziv=${data.naziv}` : `/property/image-box/?naziv=${data.naziv}`}>
-              <h3>{data.naziv}</h3>
+            <Link href={Array.isArray(data.img) ? `/property/image-slider/?naziv=${encodeURIComponent(data.naziv)}` : `/property/image-box/?naziv=${encodeURIComponent(data.naziv)}`}>
+            <h3>{data.naziv}
+              </h3>
             </Link>
             {data.cijena==0 ? <h6 style={{color:'yellow'}}>Na upit</h6> : <h6>
               {symbol}
@@ -64,7 +65,7 @@ const PropertyBox = ({ data,relativeSlider }) => {
             </ul>
             <div className="property-btn d-flex">
               <span>{data.datum}</span>
-              <Link href={Array.isArray(data.img) ? `/nekretnine/nekretnina/?naziv=${data.naziv}` : `/nekretnine/image-box/?naziv=${data.naziv}`}>
+<Link href={Array.isArray(data.img) ? `/nekretnine/nekretnina/?naziv=${encodeURIComponent(data.naziv)}` : `/nekretnine/image-box/?naziv=${encodeURIComponent(data.naziv)}`}>
                 <button type="button" className="btn btn-dashed btn-pill">
                   Detalji
                 </button>

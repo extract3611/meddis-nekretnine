@@ -354,7 +354,7 @@ li.onhover-dropdown.notification-box > div > ul > li:nth-child(2) > div > div.me
         z-index: 9;
         height: 100vh;
         line-height: inherit;
-        background:#006a62;
+        background:#1f3d75;
         transition: 0.5s;
         box-shadow: $common-box-shadow;
         margin-left: 0;
@@ -627,7 +627,22 @@ li.onhover-dropdown.notification-box > div > ul > li:nth-child(2) > div > div.me
             }
         }
     }
-
+.nav-submenu li div{color: white;
+    cursor:pointer;
+    transition: all 0.5s ease;
+    position: relative;}
+    .nav-submenu li div:hover{
+        color: black;
+        border-left: 5px solid var(--theme-default2);
+        transition: all 0.5s ease;
+        position: relative;
+    }
+.sidebar-link.active:hover{
+    color: white;
+    border-left: 5px solid var(--theme-default2);
+    transition: all 0.5s ease;
+    position: relative;
+}
     .page-body {
         padding: 0 15px;
         min-height: calc(100vh - 80px);

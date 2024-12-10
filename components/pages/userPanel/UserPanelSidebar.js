@@ -13,7 +13,7 @@ const UserPanelSidebar = ({ activeTab, setActiveTab }) => {
         <div className='user-profile'>
           <div className='media'>
             <div className='change-pic'>
-              <img src='/assets/images/avatar/3.jpg' className='img-fluid update_img' alt='' />
+              <img src='/assets/images/Sanela-Licina-web-600x563.webp' className='img-fluid update_img' alt='' />
               <div className='change-hover'>
                 <button type='button' className='btn'>
                   <Camera />

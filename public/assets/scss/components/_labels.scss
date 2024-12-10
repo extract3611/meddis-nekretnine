@@ -23,7 +23,7 @@
   text-transform: capitalize;
 
   &.label-gradient {
-    background-image: var(--theme-gradient3);
+    background-image:linear-gradient(90deg, #2A6FC2 0%, rgb(28 81 163) 100%);
   }
 
   &.label-solid {

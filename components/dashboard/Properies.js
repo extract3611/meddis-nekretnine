@@ -18,8 +18,10 @@ const Properies = ({brojNekretnina,brojProdaje,brojIzdavanja,brojNeodobreno}) =>
                                     <h6 className="light-font">Nekretnina</h6>
                                 </Media>
                                 <Link href='/admin/sve-nekretnine' style={{color:"black"}} className="arrow-animated">
+<div>
                                     Pogledaj sve nekretnine
                                     <ChevronRight />
+                                    </div>
                                 </Link>
                             </Media>
                             <ul className="light-box">
