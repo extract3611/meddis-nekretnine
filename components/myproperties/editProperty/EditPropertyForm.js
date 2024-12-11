@@ -213,7 +213,7 @@ if(nekretnina!=null && fajl!=null){
 
                  fetchNekretnine().then(nekretnine=>{  dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
                     dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)))
-                    setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},5000)
+                    setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},2000)
                 });
 
 
