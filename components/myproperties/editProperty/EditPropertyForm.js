@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { ucitajNekretnine } from '../../../redux-toolkit/nekretnine-redux/sveNekretnine';
 import { useDispatch } from 'react-redux';
-
+import { ucitajNeodobreneNekretnine } from '../../../redux-toolkit/nekretnine-redux/neodobreneNekretnine';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 const EditPropertyForm = () => {
