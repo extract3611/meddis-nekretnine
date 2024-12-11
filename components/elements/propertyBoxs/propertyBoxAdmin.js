@@ -11,7 +11,7 @@ import PropertyLabel from "../PropertyLabel";
 import ThumbnailSlider from "../../elements/ThumbnailSlider";
 import { brisiNekretninu, ucitajNekretnine } from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 import { brisiNeodobrenuNekretninu } from "../../../redux-toolkit/nekretnine-redux/neodobreneNekretnine";
-
+import { ucitajNekretnine } from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 const PropertyBox = ({ data, relativeSlider, video }) => {
   const dispatch = useDispatch();
   const [load, setLoad] = useState(true);
@@ -19,14 +19,77 @@ const PropertyBox = ({ data, relativeSlider, video }) => {
   const [slike, postaviSlike] = useState([]);
   const { symbol, currencyValue } = useSelector((state) => state.currencyReducer);
 
-  const alertFnc = () => {
-    toast.warning("Da li ste sigurni da želite da obrišete izabrani projekat?", {
-      autoClose: 5000,
-      closeButton: true,
-      position: "bottom-center",
-      onClose: () => deleteProperty(),
-    });
+  
+
+
+  let fetchNekretnine = async () => {
+    return await axios.get(`https://white-homes.me/api/nekretnine`);
   };
+  const [x,y]=useState(false);
+
+  const [loader,postaviLoader]=useState(false);
+const nekretnine=useSelector(state=>state.nekretnine)
+
+
+
+
+
+
+  const toastFnc = () => {
+    // Dohvatanje trenutnog ID-a toasta
+    const toastId = toast.warn(
+      <div>
+        <p>Da li ste sigurni da želite da obrišete željenog korisnika?</p>
+        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "10px" }}>
+          {/* Dugme za potvrdu */}
+          <button
+            onClick={() => {
+              deleteProperty(); // Brisanje korisnika
+              toast.success("Nekretnina je uspješno obrisana.");
+              toast.dismiss(toastId); // Zatvaranje trenutnog toasta
+            }}
+            style={{
+              backgroundColor: "green",
+              color: "white",
+              border: "none",
+              padding: "8px 12px",
+              cursor: "pointer",
+              borderRadius: "5px",
+            }}
+          >
+            Da, siguran sam
+          </button>
+  
+          {/* Dugme za odbijanje */}
+          <button
+            onClick={() => {
+              toast.info("Akcija je otkazana.");
+              toast.dismiss(toastId); // Zatvaranje trenutnog toasta
+            }}
+            style={{
+              backgroundColor: "red",
+              color: "white",
+              border: "none",
+              padding: "8px 12px",
+              cursor: "pointer",
+              borderRadius: "5px",
+            }}
+          >
+            Ne, izađi
+          </button>
+        </div>
+      </div>,
+      {
+        position: "top-center",
+        autoClose: false, // Onemogućava automatsko zatvaranje
+        closeOnClick: false, // Onemogućava zatvaranje klikom na toast
+        draggable: false, // Onemogućava pomeranje
+      }
+    );
+  };
+
+
+
 
   const deleteProperty = async () => {
     try {
@@ -35,8 +98,12 @@ const PropertyBox = ({ data, relativeSlider, video }) => {
       });
       if (data.odobreno === true) {
         dispatch(brisiNekretninu(data.id_nekretnina));
+        fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
+          dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)))});
       } else {
         dispatch(brisiNeodobrenuNekretninu(data.id_nekretnina));
+        fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
+          dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)))});
       }
       toast.success("Nekretnina je uspešno obrisana!");
     } catch (error) {
@@ -163,7 +230,7 @@ const PropertyBox = ({ data, relativeSlider, video }) => {
               </Link>
 
               <button
-                onClick={alertFnc}
+                onClick={toastFnc}
                 style={{ display: "flex", justifyContent: "space-between" }}
                 type="button"
                 className="btn btn-dashed btn-pill"
