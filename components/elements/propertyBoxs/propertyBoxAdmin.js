@@ -11,7 +11,6 @@ import PropertyLabel from "../PropertyLabel";
 import ThumbnailSlider from "../../elements/ThumbnailSlider";
 import { brisiNekretninu, ucitajNekretnine } from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 import { brisiNeodobrenuNekretninu } from "../../../redux-toolkit/nekretnine-redux/neodobreneNekretnine";
-import { ucitajNekretnine } from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 const PropertyBox = ({ data, relativeSlider, video }) => {
   const dispatch = useDispatch();
   const [load, setLoad] = useState(true);
