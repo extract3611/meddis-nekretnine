@@ -211,9 +211,9 @@ if(nekretnina!=null && fajl!=null){
                   });
                 toast.success("Vaši podaci su uspješno sačuvani");
 
-                fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
+                 fetchNekretnine().then(nekretnine=>{  dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
                     dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)))
-                    setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},2000)
+                    setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},5000)
                 });
 
 
