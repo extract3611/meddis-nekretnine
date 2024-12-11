@@ -136,7 +136,7 @@ useEffect(()=>{
         pretvaranjeSlikaFajl();
 }},[slikeGalerijaUrl])
 let fetchNekretnine = async () => {
-    return await axios.get(`/api/nekretnine`);
+    return await axios.get(`https://white-homes.me/api/nekretnine`);
   };
     const uploadSlike= (podaci) => {
     
@@ -210,8 +210,15 @@ if(nekretnina!=null && fajl!=null){
                     console.log(error);
                   });
                 toast.success("Vaši podaci su uspješno sačuvani");
+
                 fetchNekretnine().then(nekretnine=>{dispatch(ucitajNekretnine(nekretnine.data.filter(x=>x.odobreno==1)));
-                setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},2000)});}}
+                    dispatch(ucitajNeodobreneNekretnine(nekretnine.data.filter(x=>x.odobreno==0)))
+                    setTimeout(()=>{ruter.push("/admin/sve-nekretnine")},2000)
+                });
+
+
+            
+            }}
             render={() => (
                 <Form>
                     <Row className="gx-3">
