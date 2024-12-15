@@ -93,7 +93,8 @@ const AddPropertyForm = () => {
                 naziv:Yup.string().required(t('Molimo vas upišite naziv nekretnine')),
                 tipNekretnine: Yup.string().required(t('Molimo vas izaberite tip nekretnine')),
                 statusNekretnine: Yup.string().required(t('Molimo vas izaberite status nekretnine')),
-                cijena: Yup.string().matches(/^[0-9\s]*$/, "Dozvoljeni unos, brojevi i prazna mjesta.").trim().required("Molimo vas unesite cijenu nekretnine."),                površina: Yup.number().typeError(t("Molimo vas unesite broj")).required(t('Molimo vas unesite površinu nekretnine')),
+                cijena: Yup.string().matches(/^[0-9\s]*$/, "Dozvoljeni unos, brojevi i prazna mjesta.").trim().required("Molimo vas unesite cijenu nekretnine."),
+                površina: Yup.number().typeError(t("Molimo vas unesite broj")).required(t('Molimo vas unesite površinu nekretnine')),
                 opis: Yup.string().required(t("Molimo vas unesite opis nekretnine")),
                 adresa: Yup.string().required(t("Molimo vas unesite adresu/naselje nekretnine")),
                 država: Yup.string().required(t("Molimo vas izaberite državu nekretnine")),
@@ -101,7 +102,7 @@ const AddPropertyForm = () => {
                 površinaPlaca:Yup.number().typeError(t("Molimo vas unesite broj")),
                 imePrezime: Yup.string().required(t('Molimo vas unesite vaše ime i prezime')),
                 email: Yup.string().email().typeError(t("Forma emaila nije validna.")).required(t('Molimo vas upišite vaš email')),
-                kontakt: Yup.string().matches(/^[0-9]{9,11}$/, t('Broj telefona nije validan.')).required(t('Molimo vas upišite kontakt telefon')),
+                kontakt: Yup.string().matches(/^\+?[0-9]{1,4}[\s\-]?[0-9]{1,4}[\s\-]?[0-9]{1,4}[\s\-]?[0-9]{1,4}$/, t('Broj telefona nije validan.')).required(t('Molimo vas upišite kontakt telefon'))
 
             })}
             onSubmit={(values) => {
