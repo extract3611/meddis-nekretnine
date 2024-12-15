@@ -38,12 +38,6 @@ export const getStaticPaths = async ({ locales }) => {
   };
 };
 
-
-
-
-
-
-
 const ImageBox = () => {
 const router = useRouter();
 
@@ -88,9 +82,14 @@ else{return(<><h1>ocitavanje</h1></>)}
 
 }
 
-ImageBox.getLayout = function getLayout(page) {
-  console.log(page)
-  
-  return <Layout title="Sve nekretnine- Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, mi vam nudimo široki spektar svih tipova nekretnina.">{page}</Layout>;
+ImageBox.getLayout = function getLayout(page, nekretninaa = null) {
+  const title = nekretninaa
+    ? `Meddis nekretnine - ${nekretninaa.naziv}`
+    : "Meddis nekretnine";
+  const description = nekretninaa
+    ? `Meddis nekretnine - ${nekretninaa.naziv}, površina ${nekretninaa.povrsina} m², ${nekretninaa.brojSoba} spavaće sobe. ${nekretninaa.opis}. Pogledajte više detalja i cijenu na našoj stranici!`
+    : "Kupovina i prodaja nekretnina";
+
+  return <Layout title={title} description={description}>{page}</Layout>;
 };
 export default ImageBox;

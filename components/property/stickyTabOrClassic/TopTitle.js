@@ -53,7 +53,7 @@ const TopTitle = ({ singleData }) => {
                 <div className="share-hover">
                   <ul>
                     <li>
-                      <a href="https://www.facebook.com/" className="icon-facebook" target="_blank" rel="noreferrer">
+                      <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.meddis-nekretnine.me/nekretnine/nekretnina/${singleData.id_nekretnina}`} className="icon-facebook" target="_blank" rel="noreferrer">
                         <Facebook></Facebook>
                       </a>
                     </li>
