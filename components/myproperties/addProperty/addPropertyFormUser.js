@@ -62,6 +62,10 @@ const AddPropertyForm = () => {
         });
       }
 
+
+
+      
+
     return (
         <Formik
             initialValues={{
@@ -89,9 +93,12 @@ const AddPropertyForm = () => {
                 naziv:Yup.string().required(t('Molimo vas upišite naziv nekretnine')),
                 tipNekretnine: Yup.string().required(t('Molimo vas izaberite tip nekretnine')),
                 statusNekretnine: Yup.string().required(t('Molimo vas izaberite status nekretnine')),
-                cijena: Yup.number().typeError(t("Molimo vas unesite cijenu nekretnine(broj)")),
-                površina: Yup.number().typeError(t("Molimo vas unesite broj")).required(t('Molimo vas unesite površinu nekretnine')),
-                opis: Yup.string().required(t("Molimo vas unesite opis nekretnine")),
+                cijena: Yup.string()
+                .matches(/^[0-9\s]*$/, "Dozvoljeni unos, brojevi i prazna mjesta.")
+                .transform(value => value.replace(/\s+/g, '')) // Uklanja prazna mjesta unutar stringa
+                .trim() // Uklanja vodeće i završne praznine
+                .required("Molimo vas unesite cijenu nekretnine."),
+                                opis: Yup.string().required(t("Molimo vas unesite opis nekretnine")),
                 adresa: Yup.string().required(t("Molimo vas unesite adresu/naselje nekretnine")),
                 država: Yup.string().required(t("Molimo vas izaberite državu nekretnine")),
                 grad: Yup.string().required(t("Molimo vas izaberite grad nekretnine")),
