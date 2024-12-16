@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 const ContactInfo = () => {
   const { t } = useTranslation("common");
   const phoneNumber = "+382067623663"; // Koristi broj telefona kao varijablu
-
+  const viberNumber = phoneNumber.replace('+', '%2B'); // Zameni + sa %2B za Viber
   return (
     <div className='advance-card'>
       <h6>{t("Kontakt informacije agenta")}</h6>
@@ -32,7 +32,7 @@ const ContactInfo = () => {
          <ul style={{display:"flex",alignItems:"baseline",margin:"20px 0px", justifyContent:'center'}}>
          <li>
 
-<a href={`viber://chat?number=${phoneNumber}`} target="_blank" rel="noopener noreferrer">
+<a href={`viber://chat?number=${viberNumber}`} target="_blank" rel="noopener noreferrer">
 <img  style={{margin:10}} src='/assets/images/viber.svg' className='img-50' alt='' />
 </a>
 </li>
