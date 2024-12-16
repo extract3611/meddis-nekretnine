@@ -388,6 +388,7 @@ div.editable::-webkit-scrollbar-thumb {
     .advance-card > h6 {
       color: black;
       margin-bottom: 30px;
+      
       text-transform: capitalize;
       position: relative;
       font-weight: 600;

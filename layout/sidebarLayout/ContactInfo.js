@@ -1,27 +1,19 @@
-/**
- * It returns a div with a class of advance-card, which contains a h6 with the text "Contact Info",
- * which contains a div with a class of category-property, which contains a div with a class of
- * agent-info, which contains a div with a class of media, which contains an img with a class of
- * img-50, which contains a div with a class of media-body ms-2, which contains a h6 with the text
- * "Jonathan Scott", which contains a p with the text "Contact@gmail.com", which contains a ul, which
- * contains two li's, which contain an i with a class of me-2, which contains the text "A-32, Albany,
- * Newyork." and "(+066) 518 - 457 - 5181"
- * @returns A div with a class of advance-card.
- */
 import React from "react";
-import { MapPin, PhoneCall } from "react-feather";
+import { MapPin, PhoneCall, WhatsApp, MessageCircle } from "react-feather";  // Pravilan import ikona
 import { useTranslation } from "next-i18next";
+
 const ContactInfo = () => {
-  const {t}=useTranslation("common");
+  const { t } = useTranslation("common");
+  const phoneNumber = "+382067623663"; // Koristi broj telefona kao varijablu
 
   return (
     <div className='advance-card'>
       <h6>{t("Kontakt informacije agenta")}</h6>
       <div className='category-property'>
         <div className='agent-info'>
-          <div className='media'>
-            <img src='/assets/images/Sanela-Licina-web-600x563.webp' className='img-50' alt='' />
-            <div className='media-body ms-2'>
+          <div style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}} className='media'>
+            <img src='/assets/images/Sanela-Licina-web-600x563.webp' style={{width:250}} alt='' />
+            <div style={{textAlign:'center',margin: "20px 0"}} className='media-body ms-2'>
               <h6>Sanela</h6>
               <p>office@meddisgroup.me</p>
             </div>
@@ -34,8 +26,23 @@ const ContactInfo = () => {
           </li>
           <li>
             <PhoneCall className='me-2' />
-            <a href="tel:+382067623663">+382/ 067 623 663</a>
+            <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
           </li>
+          {/* WhatsApp link */}
+         <ul style={{display:"flex",alignItems:"baseline",margin:"20px 0px", justifyContent:'center'}}>
+         <li>
+
+<a href={`https://wa.me/${phoneNumber.replace("+", "")}`} target="_blank" rel="noopener noreferrer">
+<img  style={{margin:10}} src='/assets/images/viber.svg' className='img-50' alt='' />
+</a>
+</li>
+{/* Viber link */}
+<li>
+<a href={`viber://add?number=${phoneNumber}`} target="_blank" rel="noopener noreferrer">
+<img style={{margin:10}} src='/assets/images/whatsapp.svg' className='img-50' alt='' />
+
+</a>
+</li>         </ul>
         </ul>
       </div>
     </div>
