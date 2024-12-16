@@ -32,13 +32,13 @@ const ContactInfo = () => {
          <ul style={{display:"flex",alignItems:"baseline",margin:"20px 0px", justifyContent:'center'}}>
          <li>
 
-<a href={`https://wa.me/${phoneNumber.replace("+", "")}`} target="_blank" rel="noopener noreferrer">
+<a href={`viber://chat?number=${phoneNumber}`} target="_blank" rel="noopener noreferrer">
 <img  style={{margin:10}} src='/assets/images/viber.svg' className='img-50' alt='' />
 </a>
 </li>
 {/* Viber link */}
 <li>
-<a href={`viber://add?number=${phoneNumber}`} target="_blank" rel="noopener noreferrer">
+<a href={`https://wa.me/${phoneNumber.replace("+", "")}`} target="_blank" rel="noopener noreferrer">
 <img style={{margin:10}} src='/assets/images/whatsapp.svg' className='img-50' alt='' />
 
 </a>
