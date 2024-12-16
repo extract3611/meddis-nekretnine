@@ -32,7 +32,7 @@ const ContactInfo = () => {
          <ul style={{display:"flex",alignItems:"baseline",margin:"20px 0px", justifyContent:'center'}}>
          <li>
 
-<a href={`viber://chat?number=${viberNumber}`} target="_blank" rel="noopener noreferrer">
+<a href={`viber://contact?number=${viberNumber}`} target="_blank" rel="noopener noreferrer">
 <img  style={{margin:10}} src='/assets/images/viber.svg' className='img-50' alt='' />
 </a>
 </li>
