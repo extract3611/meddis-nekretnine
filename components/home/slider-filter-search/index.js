@@ -14,6 +14,7 @@ import HomeBannerSection from "../search-tab/HomeBanner";
 import OfferSection from "./Offer";
 import PropertySection from "./Property";
 import SalePropertySection from "./SaleProperty";
+import Apartments from "./Apartments";
 import TestimonialSection from "./Testimonial";
 import TrustIndexComponent from "../../Review"
 import { useSelector } from "react-redux";
@@ -33,7 +34,8 @@ let sveNekretnine=useSelector(state=>state.nekretnine.niz)
       <FeatureSection value={sveNekretnine} />
       <SalePropertySection value={sveNekretnine} />
       <OfferSection value={AppPropertyData.OurNewOffer} />
-      <TrustIndexComponent/>
+      <Apartments value={sveNekretnine} />
+      <TestimonialSection/>
     </>
   );
 };

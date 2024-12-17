@@ -7,37 +7,59 @@ import NoSsr from "../../../utils/NoSsr";
 import ReviewStarr from "../../elements/ReviewStarr";
 import axios from "axios";
 
-const TestimonialSection = ({ value, normal }) => {
-  const [placeDetails, setPlaceDetails] = useState([]);
+const TestimonialSection = ({  normal }) => {
+  const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
 
-  const apiKey = "AIzaSyAlMKlgbXalICCvCcMdNw4VPzzJWx3y9b0"; // Replace with your Google API key
-  const placeIds = [
-    "ChIJtd8BEQBzThMRXOdzAg9ymvg", // Example Place ID
-    // Add more Place IDs as needed
+
+ const googleReviews = [
+    {
+      detail: "Sjajno iskustvo!",
+      name: "Andrija Ćulafić",
+    },
+    {
+      detail:
+        "Izuzetno sam zadovoljan uslugom! Kompanija je pokazala visok nivo profesionalizma, preciznosti i posvećenosti svakom detalju.",
+      name: "Muhamed BegBushati",
+    },
+    {
+      detail:
+        "Sve pohvale za MEDDiS Group Bar, za izuzetno profesionalan rad, brzinu, efikasnost i posvećenost poslu.",
+      name: "Nevenka Peković UŽIVO",
+    },
+    {
+      detail:
+        "Sve najbolje za agenciju i Sanelu. Profesionalni su u oblasti prodaje i kupovine usluga. Vrlo uspešno su mi prodali stan.",
+      name: "Azra Hodžić",
+    },
+    {
+      detail:
+        "Imam veoma pozitivno iskustvo sa agencijom za nekretnine. Profesionalan odnos, ljubaznost i posvećenost koje pokazuju su najbolja preporuka.",
+      name: "Ivan Mimović",
+    },
+    {
+      detail: "Meddis Group Bar je agencija koja će ispuniti sva vaša očekivanja.",
+      name: "Nevenka",
+    },
+    {
+      detail: "Profesionalno - pošteno - precizno... Sve na jednom mestu!",
+      name: "Veselin Šoškić",
+    },
+    {
+      detail: "Sve pohvale za korektnost i profesionalizam... Srećno i puno uspeha u budućem radu.",
+      name: "Bato Vulić",
+    },
+    {
+      detail: "Odgovornost na visokom nivou, tačnost i uspešnost. Puno sreće i uspeha.",
+      name: "Rada Dragićević",
+    },
+    {
+      detail: "Odlični su i pouzdani, sve pohvale.",
+      name: "Biljana Dasić",
+    },
   ];
-
-  useEffect(() => {
-    const fetchPlaceDetails = async () => {
-      try {
-        const promises = placeIds.map((placeId) => {
-          const url = `https://maps.googleapis.com/maps/api/place/details/json?key=${apiKey}&placeid=${placeId}`;
-          return axios.get(url);
-        });
-
-        const responses = await Promise.all(promises);
-        const validResponses = responses
-          .filter((res) => res.data.status === "OK")
-          .map((res) => res.data.result);
-
-        setPlaceDetails(validResponses);
-      } catch (err) {
-        setError("Failed to fetch place details. Please try again later.");
-      }
-    };
-
-    fetchPlaceDetails();
-  }, [apiKey, placeIds]);
+  
+  
 
   return (
     <section className={`testimonial-bg ${normal ? "testimonial-layout6" : ""}`}>
@@ -52,8 +74,8 @@ const TestimonialSection = ({ value, normal }) => {
             <NoSsr>
               <Slider className="testimonial-2 arrow-light" {...testimonial2}>
                 {/* Render static testimonial cards */}
-                {value &&
-                  value.map((data, i) => (
+                {
+                  googleReviews.map((data, i) => (
                     <div key={i}>
                       <div className="client-slider light-bg">
                         <ul className="user-list">
@@ -73,8 +95,8 @@ const TestimonialSection = ({ value, normal }) => {
                             <img src={data.img3} alt="" />
                           </li>
                         </ul>
-                        <p>{data.detail}</p>
-                        <h6>real estate</h6>
+                        <p style={{color:"white"}}>{data.detail}</p>
+                        <h6 style={{color:"white",fontSize:25}} >Meddis Real Estate</h6>
                         <ul className="client-rating">
                           <ReviewStarr />
                         </ul>
@@ -86,26 +108,7 @@ const TestimonialSection = ({ value, normal }) => {
                   ))}
 
                 {/* Render fetched place details */}
-                {placeDetails &&
-                  placeDetails.map((place, i) => (
-                    <div key={i}>
-                      <div className="client-slider light-bg">
-                        <ul className="user-list">
-                          <li>
-                            <img
-                              src={place.photos ? place.photos[0].photo_reference : "/assets/images/default-placeholder.png"}
-                              alt={place.name}
-                            />
-                          </li>
-                        </ul>
-                        <p>{place.formatted_address}</p>
-                        <h6>{place.name}</h6>
-                        <span className="label label-white label-lg">
-                          <span className="gradient-1">{place.types?.join(", ")}</span>
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+               
               </Slider>
             </NoSsr>
             {error && <p className="error-text">{error}</p>}

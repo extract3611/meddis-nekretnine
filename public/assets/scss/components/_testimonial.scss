@@ -2,7 +2,7 @@
      testimonial css start
 ==========================**/
 .testimonial-bg {
-    background-image: url(../../images/testimonial/1.jpg);
+    background-image: url(../../images/testimonial/4.jpg) !important;
     @extend %background-common;
 
     &.testimonial-layout6 {
@@ -137,7 +137,12 @@
     width: 65%;
     margin: 67px auto 0;
     position: relative;
-
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     h6,
     p {
         color: $white;

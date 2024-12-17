@@ -13,7 +13,7 @@ export default ReviewStarr;
 const Stars = ({ i, rating }) => {
   return (
     <li>
-      <i className="fas fa-star" style={{ color: `${rating && (i >= rating ? "grey" : "#ffcc33")}` }}></i>
+      <i className="fas fa-star" style={{ color: 'gold' }}></i>
     </li>
   );
 };

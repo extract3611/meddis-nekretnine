@@ -2,7 +2,8 @@
      Template CSS start
 ==========================**/
 .input::placeholder{color:rgba(255, 255, 255, 0.8);}
-
+.testimonial-bg {
+  background-image: url(../../images/testimonial/4.jpg) !important;}
 .title-svg {
   fill: var(--theme-default);
   stroke: var(--theme-default);
