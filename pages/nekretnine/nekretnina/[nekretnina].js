@@ -8,7 +8,7 @@ import Layout from "../layout";
 
 // Get server-side props to fetch data before the page is rendered
 export const getServerSideProps = async ({ params, locale }) => {
-  const response = await axios.get(`https://white-homes.me/api/pojedinacnaNekretnina/${params.nekretnina}`);
+  const response = await axios.get(`https://white-homes.me/api//izabrana-nekretnina/${params.nekretnina}`);
   const nekretnina = response.data;
 console.log(nekretnina);
   return {
