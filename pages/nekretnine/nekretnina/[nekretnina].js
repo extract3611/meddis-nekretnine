@@ -6,14 +6,14 @@ import { ucitajNekretninu } from "../../../redux-toolkit/nekretnine-redux/izabra
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import BodyContent from "../../../components/property/tabPanelPages";
 import Layout from "../layout";
-
+import { useSelector } from "react-redux";
+import Head from "next/head";
 export const getStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } });
 let p;
 export const getStaticPaths = async ({ locales }) => {
   const response = await axios.get('https://white-homes.me/api/nekretnine');
   const data = response.data;
   
-
 
 
   const ids = data.map((nekretnina) => nekretnina.id_nekretnina);
@@ -34,10 +34,6 @@ export const getStaticPaths = async ({ locales }) => {
 
 
 
-
-
-
-
 const ImageBox = () => {
 const router = useRouter();
 
@@ -53,7 +49,7 @@ useEffect(()=>{
 
   const [nekretnina,postaviNekretninu]=useState(null);
   const [slike,postaviSlike]=useState([]);
-  useEffect(()=>{axios.post(/api/galerija, {
+  useEffect(()=>{axios.post('/api/galerija', {
     id:query
   })
   .then(function (response) {
@@ -98,16 +94,17 @@ useEffect(()=>{
   return (
     <>
      <Head>
-        <title>{nekretnina.naziv}</title>
-        <meta property="og:title" content={nekretnina.naziv} />
-        <meta property="og:description" content={nekretnina.opis} />
-        <meta property="og:image" content={nekretnina.slika} />
-        <meta property="og:url" content={`https://vasasajt.com/nekretnine/${nekretnina.id}`} />
+        <title>{nekretninaa.naziv}</title>
+        <meta property="og:title" content={nekretninaa.naziv} />
+        <meta property="og:description" content={nekretninaa.opis} />
+        nekretninaa        <meta property="og:url" content={`https://meddis-nekretninte.me/nekretnine/${nekretninaa.id}`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={nekretnina.naziv} />
-        <meta name="twitter:description" content={nekretnina.opis} />
-        <meta name="twitter:image" content={nekretnina.slika} />
+        <meta name="twitter:title" content={nekretninaa.naziv} />
+        <meta name="twitter:description" content={nekretninaa.opis} />
+        <meta name="og:image" content={nekretninaa.slika} />
+        <meta name="twitter:image" content={nekretninaa.slika} />
+
       </Head>
       <BodyContent slike={slike} singleData={nekretninaa}>
       </BodyContent>
@@ -115,7 +112,7 @@ useEffect(()=>{
   );
 };}
 
-ImageBox.getLayout = function getLayout(page) {
-  return <Layout title="Sve nekretnine- Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, mi vam nudimo široki spektar svih tipova nekretnina.">{page}</Layout>;
+ImageBox.getLayout = function getLayout(page, nekretninaa) {
+  return <Layout title={`Meddis Nekretnine - ${nekretninaa.naziv}`} description={`${nekretninaa.opis}`}>{page}</Layout>;
 };
 export default ImageBox;
