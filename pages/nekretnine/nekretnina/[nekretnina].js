@@ -43,22 +43,25 @@ const ImageBox = ({ nekretnina }) => {
         <meta property="og:title" content={nekretnina.naziv} />
         <meta property="og:description" content={nekretnina.opis} />
         {/* Dynamic Open Graph image URL for individual property */}
-        <meta property="og:image" content={nekretnina.slika || "https://default-image-url.com/default.jpg"} />
+        <meta property="og:image" content={nekretnina.slika || "https://www.meddis-nekretnine.me/assets/images/logo.svg"} />
         <meta property="og:url" content={`https://www.meddis-nekretnine.me/nekretnine/nekretnina/${nekretnina.id_nekretnina}`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={nekretnina.naziv} />
         <meta name="twitter:description" content={nekretnina.opis} />
-        <meta name="twitter:image" content={nekretnina.slika || "https://default-image-url.com/default.jpg"} />
+        <meta name="twitter:image" content={nekretnina.slika || "https://www.meddis-nekretnine.me/assets/images/logo.svg"} />
       </Head>
       <BodyContent slike={slike} singleData={nekretnina} />
     </>
   );
 };
 
-ImageBox.getLayout = function getLayout(page) {
+ImageBox.getLayout = function getLayout(page, nekretnina) {
   return (
-    <Layout title="Sve nekretnine - Najveća baza nekretnina u Crnoj Gori" description="Bez obzira da li tražite nekretninu za investiciju, stanovanje ili odmor, mi vam nudimo široki spektar svih tipova nekretnina.">
+    <Layout
+      title={`Meddis nekretnine - ${nekretnina.naziv}`}
+      description={`${nekretnina.opis}`}
+    >
       {page}
     </Layout>
   );
