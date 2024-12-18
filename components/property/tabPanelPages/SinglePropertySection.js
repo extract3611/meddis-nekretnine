@@ -41,9 +41,13 @@ const SinglePropertySection = () => {
       <TabContent id="tabsContent" className="tab-content" activeTab={active}>
       
         
-        <TabPane tabId="Details">
-          <DetailsDeskBox nekretnina={nekretnina} />
-        </TabPane>
+      <TabPane tabId="Details">
+  {nekretnina ? (
+    <DetailsDeskBox nekretnina={nekretnina} />
+  ) : (
+    <p>{t("Podaci nisu dostupni")}</p>
+  )}
+</TabPane>
         
        
       </TabContent>
