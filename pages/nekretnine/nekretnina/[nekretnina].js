@@ -88,7 +88,7 @@ const ImageBox = () => {
     property="og:description" 
     content={nekretninaa.opis.length > 120 ? `${nekretninaa.opis.substring(0, 120)}...` : nekretninaa.opis} 
   />
-  <meta property="og:image" content={nekretninaa.slika} />
+  <meta property="og:image" content={`https://meddis-nekretnine.me/slike/${nekretninaa.slika}`} />
   <meta property="og:url" content={`https://meddis-nekretnine.me/nekretnine/${nekretninaa.id}`} />
 
   {/* Twitter Meta Tags */}
