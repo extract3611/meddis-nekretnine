@@ -7,10 +7,8 @@ import Slider from "react-slick";
 import { galleryFor, galleryNav } from "../../../data/slickSlider";
 import Img from "../../../utils/BackgroundImageRatio";
 import NoSsr from "../../../utils/NoSsr";
-import { LoadingScreen } from "../../../components/Common/loader";
 
 import { useRouter } from "next/router";
-import sveNekretnine from "../../../redux-toolkit/nekretnine-redux/sveNekretnine";
 import axios from "axios";
 const GallerySlider = () => {
   const [slike,postaviSlike]=useState([]);

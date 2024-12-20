@@ -1,13 +1,9 @@
 
 import Link from "next/link";
 import React from "react";
-import { Camera, Heart } from "react-feather";
-import ImageSlider from "../../elements/ImageSlider";
-import AddToCompareProducts from "./AddToCompareProducts";
+
 import PropertyLabel from "../../elements/PropertyLabel";
-import { useRouter } from "next/router";
-import { toast } from "react-toastify";
-import ThumbnailSlider from "../../elements/ThumbnailSlider";
+
 import axios from "axios";
 import { useState,useEffect } from "react";
 

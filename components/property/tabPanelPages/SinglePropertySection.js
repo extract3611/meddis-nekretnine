@@ -4,12 +4,7 @@
  */
 import React, { useState } from "react";
 import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
-import AboutDeskBox from "../stickyTabOrClassic/AboutDeskBox";
 import DetailsDeskBox from "../stickyTabOrClassic/DetailsDeskBox";
-import FeatureDeskBox from "../stickyTabOrClassic/FeatureDeskBox";
-import FloorPlanDeskBox from "../stickyTabOrClassic/FloorPlanDeskBox";
-import LocationMapDeskBox from "../stickyTabOrClassic/LocationMapDeskBox";
-import VideoDeskBox from "../stickyTabOrClassic/VideoDeskBox";
 import { useSelector } from "react-redux";
 import { useTranslation } from "next-i18next";
 const SinglePropertySection = () => {

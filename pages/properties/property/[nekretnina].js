@@ -44,18 +44,7 @@ const ImageBox = ({ nekretnina }) => {
 
   return (
     <>
-      <Head>
-        <title>{nekretnina.naziv}</title>
-        <meta property="og:title" content={nekretnina.naziv} />
-        <meta property="og:description" content={nekretnina.opis} />
-        <meta property="og:image" content={nekretnina.slika} />
-        <meta property="og:url" content={`https://www.meddis-nekretnine.me/nekretnine/nekretnina/${nekretnina.id_nekretnina}`} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={nekretnina.naziv} />
-        <meta name="twitter:description" content={nekretnina.opis} />
-        <meta name="twitter:image" content={nekretnina.slika} />
-      </Head>
+    
       <BodyContent slike={slike} singleData={nekretnina} />
     </>
   );
